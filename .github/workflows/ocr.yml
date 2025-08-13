@@ -1,4 +1,4 @@
-name: OCR Image to HTML
+name: OCR to HTML
 
 on:
   push:
@@ -7,36 +7,50 @@ on:
   workflow_dispatch:
 
 jobs:
-  ocr-html:
+  ocr-job:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-    - name: Install OCR dependencies
+    - name: نصب پیش‌نیازهای OCR
       run: |
         sudo apt-get update
-        sudo apt-get install -y tesseract-ocr
+        sudo apt-get install -y tesseract-ocr poppler-utils default-jre libglib2.0-0
 
-    - name: Install Python packages
+    - name: نصب پکیج‌های پایتون
       run: |
         python -m pip install --upgrade pip
-        pip install pillow pytesseract
+        pip install pillow pytesseract pdf2image pandas openpyxl tabula-py PyMuPDF
 
-    - name: Process images and create HTML
+    - name: پردازش OCR و ساخت HTML
       run: |
+        mkdir -p output_texts
         mkdir -p output_html
         for file in input_files/*; do
+          echo "Processing $file ..."
           filename=$(basename "$file")
+          extension="${filename##*.}"
           name="${filename%.*}"
 
-          python - <<EOF
+          if [[ "$extension" =~ ^(png|jpg|jpeg|bmp)$ ]]; then
+            python - <<EOF
 from PIL import Image
 import pytesseract
+import os
 
-img = Image.open("$file")
+file_path = "$file"
+name = "$name"
+
+img = Image.open(file_path)
 text = pytesseract.image_to_string(img, lang='eng')
 
+# ذخیره متن خام
+with open(f"output_texts/{name}.txt", "w", encoding="utf-8") as f:
+    f.write(text)
+
+# ساخت HTML سفید
 html_content = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -62,10 +76,16 @@ html_content = f"""<!DOCTYPE html>
 with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 EOF
+
+          else
+            echo "Unsupported file type: $file"
+          fi
         done
 
-    - name: Upload HTML result
+    - name: آپلود نتایج
       uses: actions/upload-artifact@v3
       with:
-        name: ocr-html-results
-        path: output_html/
+        name: ocr-results
+        path: |
+          output_texts/
+          output_html/
