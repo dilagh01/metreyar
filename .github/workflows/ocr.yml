@@ -1,73 +1,71 @@
-name: OCR Processing
+name: OCR Image to HTML
 
 on:
   push:
     paths:
-      - 'input_files/**'    # وقتی چیزی تو input_files تغییر کنه
-  workflow_dispatch:        # اجرای دستی از تب Actions
+      - 'input_files/**'
+  workflow_dispatch:
 
 jobs:
-  ocr-job:
+  ocr-html:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
 
-    - name: نصب پیش‌نیازهای OCR
+    - name: Install OCR dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y tesseract-ocr poppler-utils default-jre libglib2.0-0
+        sudo apt-get install -y tesseract-ocr
 
-    - name: نصب پکیج‌های پایتون
+    - name: Install Python packages
       run: |
         python -m pip install --upgrade pip
-        pip install pillow pytesseract pdf2image pandas openpyxl tabula-py PyMuPDF
+        pip install pillow pytesseract
 
-    - name: پردازش فایل‌ها با OCR
+    - name: Process images and create HTML
       run: |
-        mkdir -p output_texts
+        mkdir -p output_html
         for file in input_files/*; do
-          echo "Processing $file ..."
           filename=$(basename "$file")
-          extension="${filename##*.}"
           name="${filename%.*}"
 
-          if [[ "$extension" =~ ^(png|jpg|jpeg|bmp)$ ]]; then
-            python - <<EOF
+          python - <<EOF
 from PIL import Image
 import pytesseract
+
 img = Image.open("$file")
 text = pytesseract.image_to_string(img, lang='eng')
-with open(f"output_texts/{name}.txt", "w", encoding="utf-8") as f:
-    f.write(text)
-EOF
 
-          elif [[ "$extension" == "pdf" ]]; then
-            python - <<EOF
-from pdf2image import convert_from_path
-import pytesseract
-images = convert_from_path("$file")
-text = ""
-for img in images:
-    text += pytesseract.image_to_string(img, lang='eng')
-with open(f"output_texts/{name}.txt", "w", encoding="utf-8") as f:
-    f.write(text)
-EOF
+html_content = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>OCR Result - {name}</title>
+<style>
+  body {{
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    white-space: pre-wrap;
+  }}
+</style>
+</head>
+<body>
+<h2>OCR Result</h2>
+<pre>{text}</pre>
+</body>
+</html>
+"""
 
-          elif [[ "$extension" =~ ^(xls|xlsx)$ ]]; then
-            python - <<EOF
-import pandas as pd
-df = pd.read_excel("$file")
-df.to_csv(f"output_texts/{name}.csv", index=False)
+with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
 EOF
-
-          else
-            echo "Unsupported file type: $file"
-          fi
         done
 
-    - name: آپلود نتایج به‌صورت Artifact
+    - name: Upload HTML result
       uses: actions/upload-artifact@v3
       with:
-        name: ocr-results
-        path: output_texts/
+        name: ocr-html-results
+        path: output_html/
