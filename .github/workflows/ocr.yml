@@ -1,4 +1,4 @@
-name: OCR to White Page
+name: OCR to HTML
 
 on:
   push:
@@ -11,23 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout main branch
+    - name: Checkout repository
       uses: actions/checkout@v3
-      with:
-        persist-credentials: false
 
     - name: Install OCR dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y tesseract-ocr poppler-utils default-jre libglib2.0-0
-        python -m pip install --upgrade pip
-        pip install pillow pytesseract pdf2image
 
-    - name: Process files and generate HTML
+    - name: Install Python packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install pillow pytesseract pdf2image pandas openpyxl tabula-py PyMuPDF
+
+    - name: Process files
       run: |
         mkdir -p output_html
         for file in input_files/*; do
-          echo "Processing $file ..."
           filename=$(basename "$file")
           extension="${filename##*.}"
           name="${filename%.*}"
@@ -68,6 +68,7 @@ os.makedirs("output_html", exist_ok=True)
 with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 EOF
+
           elif [[ "$extension" == "pdf" ]]; then
             python - <<EOF
 from pdf2image import convert_from_path
@@ -80,7 +81,7 @@ name = "$name"
 images = convert_from_path(file_path)
 text = ""
 for img in images:
-    text += pytesseract.image_to_string(img, lang='eng') + "\n"
+    text += pytesseract.image_to_string(img, lang='eng')
 
 html_content = f"""<!DOCTYPE html>
 <html>
@@ -106,14 +107,11 @@ os.makedirs("output_html", exist_ok=True)
 with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 EOF
-          else
-            echo "Unsupported file type: $file"
           fi
         done
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Upload HTML results
+      uses: actions/upload-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./output_html
-        publish_branch: gh-pages
+        name: ocr-html-results
+        path: output_html/
