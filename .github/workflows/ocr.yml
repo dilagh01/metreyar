@@ -11,103 +11,83 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Install OCR dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y tesseract-ocr poppler-utils default-jre libglib2.0-0
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr poppler-utils
+          python -m pip install --upgrade pip
+          pip install pillow pytesseract pdf2image
 
-    - name: Install Python packages
-      run: |
-        python -m pip install --upgrade pip
-        pip install pillow pytesseract pdf2image pandas openpyxl tabula-py PyMuPDF
-
-    - name: Process files
-      run: |
-        mkdir -p output_html
-        for file in input_files/*; do
-          filename=$(basename "$file")
-          extension="${filename##*.}"
-          name="${filename%.*}"
-
-          # پردازش عکس‌ها
-          if [[ "$extension" =~ ^(png|jpg|jpeg|bmp)$ ]]; then
-            file_path="$file"
-            export file_path name
-            python - <<'EOF'
-from PIL import Image
-import pytesseract
+      - name: Create OCR script
+        run: |
+          mkdir -p scripts
+          cat > scripts/ocr.py << 'PY'
+import sys
 import os
+from pathlib import Path
 
-file_path = os.environ["file_path"]
-name = os.environ["name"]
+def ocr_image(fp):
+    from PIL import Image
+    import pytesseract
+    img = Image.open(fp)
+    return pytesseract.image_to_string(img, lang='eng')
 
-img = Image.open(file_path)
-text = pytesseract.image_to_string(img, lang='eng')
+def ocr_pdf(fp):
+    from pdf2image import convert_from_path
+    import pytesseract
+    text = []
+    for img in convert_from_path(fp):
+        text.append(pytesseract.image_to_string(img, lang='eng'))
+    return "\n".join(text)
 
-html_content = f"""
-<html>
-<head><meta charset="utf-8"><title>{name}</title></head>
-<body>
-<pre>{text}</pre>
-</body>
-</html>
-"""
-
-os.makedirs("output_html", exist_ok=True)
-with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-EOF
-
-          # پردازش PDFها
-          elif [[ "$extension" == "pdf" ]]; then
-            file_path="$file"
-            export file_path name
-            python - <<'EOF'
-from pdf2image import convert_from_path
-import pytesseract
-import os
-
-file_path = os.environ["file_path"]
-name = os.environ["name"]
-
-images = convert_from_path(file_path)
-text = ""
-for img in images:
-    text += pytesseract.image_to_string(img, lang='eng')
-
-html_content = f"""<!DOCTYPE html>
+def to_html(name, text):
+    return f"""<!DOCTYPE html>
 <html>
 <head>
-<meta charset='UTF-8'>
-<title>OCR Result - {name}</title>
+<meta charset="UTF-8">
+<title>{name}</title>
 <style>
-  body {{
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    white-space: pre-wrap;
-  }}
+body {{ font-family: Arial; background:white; color:black; padding:20px; white-space:pre-wrap; }}
 </style>
 </head>
 <body>
 <pre>{text}</pre>
 </body>
-</html>
-"""
+</html>"""
 
-os.makedirs("output_html", exist_ok=True)
-with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-EOF
-          fi
-        done
+if __name__ == "__main__":
+    input_path = sys.argv[1]
+    output_dir = Path(sys.argv[2])
+    base_name = sys.argv[3]
 
-    - name: Upload HTML results
-      uses: actions/upload-artifact@v3
-      with:
-        name: ocr-html-results
-        path: output_html/
+    ext = Path(input_path).suffix.lower().lstrip(".")
+    if ext in ("png","jpg","jpeg","bmp"):
+        text = ocr_image(input_path)
+    elif ext == "pdf":
+        text = ocr_pdf(input_path)
+    else:
+        print(f"Unsupported file type: {ext}", file=sys.stderr)
+        sys.exit(0)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / f"{base_name}.html").write_text(to_html(base_name, text), encoding="utf-8")
+PY
+
+      - name: Run OCR on files
+        run: |
+          mkdir -p output_html
+          shopt -s nullglob
+          for file in input_files/*; do
+            filename="$(basename "$file")"
+            base="${filename%.*}"
+            python scripts/ocr.py "$file" "output_html" "$base"
+          done
+
+      - name: Upload HTML results
+        uses: actions/upload-artifact@v3
+        with:
+          name: ocr-html-results
+          path: output_html/
