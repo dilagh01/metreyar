@@ -26,8 +26,7 @@ jobs:
           mkdir -p scripts
           cat > scripts/ocr.py << 'PY'
 import sys
-import os
-from pathlib import Path
+
 
 def ocr_image(fp):
     from PIL import Image
