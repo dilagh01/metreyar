@@ -32,8 +32,11 @@ jobs:
           extension="${filename##*.}"
           name="${filename%.*}"
 
+          # پردازش عکس‌ها
           if [[ "$extension" =~ ^(png|jpg|jpeg|bmp)$ ]]; then
-  python - <<'EOF'
+            file_path="$file"
+            export file_path name
+            python - <<'EOF'
 from PIL import Image
 import pytesseract
 import os
@@ -44,20 +47,31 @@ name = os.environ["name"]
 img = Image.open(file_path)
 text = pytesseract.image_to_string(img, lang='eng')
 
+html_content = f"""
+<html>
+<head><meta charset="utf-8"><title>{name}</title></head>
+<body>
+<pre>{text}</pre>
+</body>
+</html>
+"""
+
 os.makedirs("output_html", exist_ok=True)
-with open(f"output_html/{name}.txt", "w", encoding="utf-8") as f:
-    f.write(text)
+with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
 EOF
-fi
-     
-      elif [[ "$extension" == "pdf" ]]; then
-            python - <<EOF
+
+          # پردازش PDFها
+          elif [[ "$extension" == "pdf" ]]; then
+            file_path="$file"
+            export file_path name
+            python - <<'EOF'
 from pdf2image import convert_from_path
 import pytesseract
 import os
 
-file_path = "$file"
-name = "$name"
+file_path = os.environ["file_path"]
+name = os.environ["name"]
 
 images = convert_from_path(file_path)
 text = ""
@@ -84,6 +98,7 @@ html_content = f"""<!DOCTYPE html>
 </body>
 </html>
 """
+
 os.makedirs("output_html", exist_ok=True)
 with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
     f.write(html_content)
