@@ -33,43 +33,24 @@ jobs:
           name="${filename%.*}"
 
           if [[ "$extension" =~ ^(png|jpg|jpeg|bmp)$ ]]; then
-            python - <<EOF
+  python - <<'EOF'
 from PIL import Image
 import pytesseract
 import os
 
-file_path = "$file"
-name = "$name"
+file_path = os.environ["file_path"]
+name = os.environ["name"]
 
 img = Image.open(file_path)
 text = pytesseract.image_to_string(img, lang='eng')
 
-html_content = f"""<!DOCTYPE html>
-<html>
-<head>
-<meta charset='UTF-8'>
-<title>OCR Result - {name}</title>
-<style>
-  body {{
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    white-space: pre-wrap;
-  }}
-</style>
-</head>
-<body>
-<pre>{text}</pre>
-</body>
-</html>
-"""
 os.makedirs("output_html", exist_ok=True)
-with open(f"output_html/{name}.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
+with open(f"output_html/{name}.txt", "w", encoding="utf-8") as f:
+    f.write(text)
 EOF
-
-          elif [[ "$extension" == "pdf" ]]; then
+fi
+     
+      elif [[ "$extension" == "pdf" ]]; then
             python - <<EOF
 from pdf2image import convert_from_path
 import pytesseract
