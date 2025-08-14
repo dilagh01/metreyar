@@ -1,94 +1,58 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>پردازش تصویر</title>
-    <style>
-        /* فونت اصلی قابل زوم */
-        html {
-            font-size: 16px; /* پایه برای rem */
-        }
-        body { 
-            font-family: sans-serif; 
-            text-align: center; 
-            margin-top: 3rem; 
-        }
-        h1 { 
-            font-size: 2rem; /* قابل تغییر با زوم مرورگر */
-        }
-        input { 
-            font-size: 1rem; 
-        }
-        canvas { 
-            border: 1px solid #000; 
-            margin-top: 2rem; 
-            max-width: 90%; /* برای موبایل و بزرگ‌نمایی */
-            height: auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>استخراج متن از تصویر (خاکستری)</title>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+<style>
+body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+#canvas { max-width: 90%; border: 1px solid #000; margin-top: 20px; }
+textarea { width: 90%; height: 200px; margin-top: 20px; font-size: 1rem; }
+</style>
 </head>
 <body>
 
-<h1>پردازش تصویر</h1>
-<input type="file" id="upload" accept="image/*">
-<br>
-<canvas id="canvas"></canvas>
+<h1>استخراج متن از تصویر قرآن (خاکستری)</h1>
+<input type="file" id="upload" accept="image/*"><br>
+<canvas id="canvas"></canvas><br>
+<button id="extract">استخراج متن</button><br>
+<textarea id="output" placeholder="متن استخراج شده اینجا نمایش داده می‌شود"></textarea>
 
 <script>
-function enhanceText(imageElement) {
-    const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+let imgElement = new Image();
 
-    canvas.width = imageElement.width;
-    canvas.height = imageElement.height;
-    ctx.drawImage(imageElement, 0, 0);
-
-    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    let data = imageData.data;
-
-    for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-        const brightness = (r + g + b) / 3;
-
-        if (brightness < 150) {
-            data[i] = data[i + 1] = data[i + 2] = 0;
-        } else {
-            data[i] = data[i + 1] = data[i + 2] = 255;
-        }
-    }
-
-    function dilate(data, width, height) {
-        let copy = new Uint8ClampedArray(data);
-        for (let y = 1; y < height - 1; y++) {
-            for (let x = 1; x < width - 1; x++) {
-                let i = (y * width + x) * 4;
-                if (copy[i] === 0) {
-                    for (let dy = -1; dy <= 1; dy++) {
-                        for (let dx = -1; dx <= 1; dx++) {
-                            let ni = ((y + dy) * width + (x + dx)) * 4;
-                            data[ni] = data[ni + 1] = data[ni + 2] = 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    dilate(data, canvas.width, canvas.height);
-    ctx.putImageData(imageData, 0, 0);
-}
-
-document.getElementById("upload").addEventListener("change", function(e) {
+document.getElementById("upload").addEventListener("change", function(e){
     const file = e.target.files[0];
-    if (!file) return;
+    if(!file) return;
 
-    const img = new Image();
-    img.onload = function() {
-        enhanceText(img);
+    imgElement.onload = () => {
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = imgElement.width;
+        canvas.height = imgElement.height;
+        ctx.drawImage(imgElement, 0, 0);
+
+        // تبدیل تصویر به خاکستری برای OCR-friendly شدن
+        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let data = imageData.data;
+        for (let i = 0; i < data.length; i += 4) {
+            let avg = (data[i] + data[i+1] + data[i+2]) / 3;
+            data[i] = data[i+1] = data[i+2] = avg;
+        }
+        ctx.putImageData(imageData, 0, 0);
     }
-    img.src = URL.createObjectURL(file);
+
+    imgElement.src = URL.createObjectURL(file);
+});
+
+document.getElementById("extract").addEventListener("click", function(){
+    Tesseract.recognize(
+        imgElement,
+        'ara', // زبان عربی
+        { logger: m => console.log(m) }
+    ).then(({ data: { text } }) => {
+        document.getElementById("output").value = text;
+    });
 });
 </script>
 
