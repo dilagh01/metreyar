@@ -1,20 +1,63 @@
-k<!DOCTYPE html>
+kk<!DOCTYPE html>
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>سیاه و سفید فقط متن</title>
+<title>پاکسازی نویز و پررنگ کردن متن</title>
 <style>
   body { background: white; text-align: center; }
   canvas { border: 1px solid #aaa; margin-top: 20px; }
 </style>
 </head>
 <body>
-<h1>فیلتر: فقط نوشته‌ها و خطوط تیره</h1>
+<h1>حذف نقطه‌ها و پررنگ‌کردن خطوط</h1>
 <input type="file" id="upload" accept="image/*">
 <br>
 <canvas id="c"></canvas>
 
 <script>
+function removeNoiseAndBold(ctx, width, height) {
+  let imgData = ctx.getImageData(0, 0, width, height);
+  let data = imgData.data;
+
+  // مرحله ۱: باینری‌کردن تصویر
+  for (let i = 0; i < data.length; i += 4) {
+    let brightness = 0.299 * data[i] + 0.587 * data[i+1] + 0.114 * data[i+2];
+    if (brightness < 150) { // تاریک → سیاه
+      data[i] = 0; data[i+1] = 0; data[i+2] = 0;
+    } else { // روشن → سفید
+      data[i] = 255; data[i+1] = 255; data[i+2] = 255;
+    }
+  }
+
+  ctx.putImageData(imgData, 0, 0);
+
+  // مرحله ۲: پررنگ‌تر کردن و حذف نقطه‌ها (دلایل ساده)
+  let temp = ctx.getImageData(0, 0, width, height);
+  let tData = temp.data;
+
+  for (let y = 1; y < height - 1; y++) {
+    for (let x = 1; x < width - 1; x++) {
+      let blackCount = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          let i = ((y + dy) * width + (x + dx)) * 4;
+          if (tData[i] === 0) blackCount++;
+        }
+      }
+      let i = (y * width + x) * 4;
+      if (blackCount >= 4) {
+        // سیاه کردن پیکسل
+        data[i] = 0; data[i+1] = 0; data[i+2] = 0;
+      } else {
+        // سفید کردن پیکسل (حذف نقطه‌ها)
+        data[i] = 255; data[i+1] = 255; data[i+2] = 255;
+      }
+    }
+  }
+
+  ctx.putImageData(imgData, 0, 0);
+}
+
 let fileInput = document.getElementById("upload");
 let canvas = document.getElementById("c");
 let ctx = canvas.getContext("2d");
@@ -28,24 +71,7 @@ fileInput.addEventListener("change", e => {
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0);
-
-    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    let data = imageData.data;
-
-    for (let i = 0; i < data.length; i += 4) {
-      let brightness = 0.299 * data[i] + 0.587 * data[i+1] + 0.114 * data[i+2];
-      if (brightness < 160) { // هر چی تیره‌تر از این باشه → سیاه
-        data[i] = 0;
-        data[i+1] = 0;
-        data[i+2] = 0;
-      } else { // روشن → سفید
-        data[i] = 255;
-        data[i+1] = 255;
-        data[i+2] = 255;
-      }
-    }
-
-    ctx.putImageData(imageData, 0, 0);
+    removeNoiseAndBold(ctx, canvas.width, canvas.height);
   };
   
   img.src = URL.createObjectURL(file);
