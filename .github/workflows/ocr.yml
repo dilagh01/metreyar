@@ -2,8 +2,8 @@ name: OCR to HTML
 
 on:
   push:
-    paths:
-      - 'input_files/**'
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout repository
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # برای ساخت شاخه جدید
 
+      # 2. نصب وابستگی‌ها
       - name: Install system dependencies
         run: |
           sudo apt-get update
@@ -22,6 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pillow pytesseract pdf2image
 
+      # 3. اجرای OCR
       - name: Run OCR
         run: |
           mkdir -p output_html
@@ -31,16 +35,20 @@ jobs:
             python scripts/ocr.py "$file" "output_html" "$base"
           done
 
-      - name: Commit and Push results
+      # 4. Commit و Push خروجی به شاخه جدا
+      - name: Commit and Push results to ocr-results
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B ocr-results
           git add output_html
           git commit -m "Add OCR results [skip ci]" || echo "No changes to commit"
-          git push origin main
+          git push origin ocr-results --force
 
+      # 5. Upload artifact برای دانلود از Actions
       - name: Upload HTML results
         uses: actions/upload-artifact@v3
         with:
           name: ocr-html-results
           path: output_html/
+
