@@ -10,63 +10,65 @@ function enhanceText(imageElement) {
   let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imageData.data;
 
-  // مرحله 1: تبدیل به سیاه و سفید + آستانه‌گذاری
+  // مرحله 1: تبدیل به سیاه و سفید با آستانه‌گذاری قوی‌تر
   for (let i = 0; i < data.length; i += 4) {
     const r = data[i];
     const g = data[i + 1];
     const b = data[i + 2];
-    const brightness = (r + g + b) / 3;
+    // روشنایی با وزن‌دهی مشابه چشم انسان
+    const brightness = 0.299*r + 0.587*g + 0.114*b;
 
-    if (brightness < 150) {
+    if (brightness < 180) {
       data[i] = data[i + 1] = data[i + 2] = 0; // سیاه
     } else {
       data[i] = data[i + 1] = data[i + 2] = 255; // سفید
     }
   }
 
-  // مرحله 2: ضخیم‌تر کردن حروف (dilate)
-  function dilate(data, width, height) {
+  // مرحله 2: حذف نویزهای کوچک
+  function removeNoise(data, width, height) {
     let copy = new Uint8ClampedArray(data);
-    for (let y = 1; y < height - 1; y++) {
-      for (let x = 1; x < width - 1; x++) {
-        let i = (y * width + x) * 4;
-        if (copy[i] === 0) {
-          // پیکسل سیاه → همسایه‌ها رو هم سیاه کن
-          for (let dy = -1; dy <= 1; dy++) {
-            for (let dx = -1; dx <= 1; dx++) {
-              let ni = ((y + dy) * width + (x + dx)) * 4;
-              data[ni] = data[ni + 1] = data[ni + 2] = 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // مرحله 3: حذف نویز سیاه (کوچک‌تر از چند پیکسل)
-  function removeSmallDots(data, width, height) {
-    let copy = new Uint8ClampedArray(data);
-    for (let y = 1; y < height - 1; y++) {
-      for (let x = 1; x < width - 1; x++) {
-        let i = (y * width + x) * 4;
+    for (let y = 1; y < height-1; y++) {
+      for (let x = 1; x < width-1; x++) {
+        let i = (y*width + x)*4;
         if (copy[i] === 0) {
           let blackCount = 0;
-          for (let dy = -1; dy <= 1; dy++) {
-            for (let dx = -1; dx <= 1; dx++) {
-              let ni = ((y + dy) * width + (x + dx)) * 4;
+          for (let dy=-1; dy<=1; dy++) {
+            for (let dx=-1; dx<=1; dx++) {
+              let ni = ((y+dy)*width + (x+dx))*4;
               if (copy[ni] === 0) blackCount++;
             }
           }
-          if (blackCount <= 2) {
-            data[i] = data[i + 1] = data[i + 2] = 255;
+          if (blackCount <= 3) { // نویز کوچک
+            data[i] = data[i+1] = data[i+2] = 255;
           }
         }
       }
     }
   }
 
-  removeSmallDots(data, canvas.width, canvas.height);
-  dilate(data, canvas.width, canvas.height);
+  // مرحله 3: ضخیم‌تر کردن خطوط
+  function dilate(data, width, height, iterations=2) {
+    for (let n=0; n<iterations; n++) {
+      let copy = new Uint8ClampedArray(data);
+      for (let y = 1; y < height-1; y++) {
+        for (let x = 1; x < width-1; x++) {
+          let i = (y*width + x)*4;
+          if (copy[i] === 0) {
+            for (let dy=-1; dy<=1; dy++) {
+              for (let dx=-1; dx<=1; dx++) {
+                let ni = ((y+dy)*width + (x+dx))*4;
+                data[ni] = data[ni+1] = data[ni+2] = 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  removeNoise(data, canvas.width, canvas.height);
+  dilate(data, canvas.width, canvas.height, 3); // ضخیم‌تر شدن خطوط با ۳ بار تکرار
 
   ctx.putImageData(imageData, 0, 0);
   document.body.appendChild(canvas);
