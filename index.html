@@ -1,75 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>پردازش تصویر</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        canvas { border: 1px solid #000; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>پردازش تصویر</h1>
+<input type="file" id="upload" accept="image/*">
+<br>
+<canvas id="canvas"></canvas>
+
+<script>
 function enhanceText(imageElement) {
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
 
-  // اندازه بوم = اندازه عکس
-  canvas.width = imageElement.width;
-  canvas.height = imageElement.height;
-  ctx.drawImage(imageElement, 0, 0);
+    canvas.width = imageElement.width;
+    canvas.height = imageElement.height;
+    ctx.drawImage(imageElement, 0, 0);
 
-  let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  let data = imageData.data;
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let data = imageData.data;
 
-  // مرحله 1: تبدیل به سیاه و سفید با آستانه‌گذاری قوی‌تر
-  for (let i = 0; i < data.length; i += 4) {
-    const r = data[i];
-    const g = data[i + 1];
-    const b = data[i + 2];
-    // روشنایی با وزن‌دهی مشابه چشم انسان
-    const brightness = 0.299*r + 0.587*g + 0.114*b;
+    // تبدیل تصویر به سیاه و سفید براساس روشنایی
+    for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        const brightness = (r + g + b) / 3;
 
-    if (brightness < 180) {
-      data[i] = data[i + 1] = data[i + 2] = 0; // سیاه
-    } else {
-      data[i] = data[i + 1] = data[i + 2] = 255; // سفید
-    }
-  }
-
-  // مرحله 2: حذف نویزهای کوچک
-  function removeNoise(data, width, height) {
-    let copy = new Uint8ClampedArray(data);
-    for (let y = 1; y < height-1; y++) {
-      for (let x = 1; x < width-1; x++) {
-        let i = (y*width + x)*4;
-        if (copy[i] === 0) {
-          let blackCount = 0;
-          for (let dy=-1; dy<=1; dy++) {
-            for (let dx=-1; dx<=1; dx++) {
-              let ni = ((y+dy)*width + (x+dx))*4;
-              if (copy[ni] === 0) blackCount++;
-            }
-          }
-          if (blackCount <= 3) { // نویز کوچک
-            data[i] = data[i+1] = data[i+2] = 255;
-          }
+        if (brightness < 150) {
+            data[i] = data[i + 1] = data[i + 2] = 0;
+        } else {
+            data[i] = data[i + 1] = data[i + 2] = 255;
         }
-      }
     }
-  }
 
-  // مرحله 3: ضخیم‌تر کردن خطوط
-  function dilate(data, width, height, iterations=2) {
-    for (let n=0; n<iterations; n++) {
-      let copy = new Uint8ClampedArray(data);
-      for (let y = 1; y < height-1; y++) {
-        for (let x = 1; x < width-1; x++) {
-          let i = (y*width + x)*4;
-          if (copy[i] === 0) {
-            for (let dy=-1; dy<=1; dy++) {
-              for (let dx=-1; dx<=1; dx++) {
-                let ni = ((y+dy)*width + (x+dx))*4;
-                data[ni] = data[ni+1] = data[ni+2] = 0;
-              }
+    // اعمال Dilate
+    function dilate(data, width, height) {
+        let copy = new Uint8ClampedArray(data);
+        for (let y = 1; y < height - 1; y++) {
+            for (let x = 1; x < width - 1; x++) {
+                let i = (y * width + x) * 4;
+                if (copy[i] === 0) {
+                    for (let dy = -1; dy <= 1; dy++) {
+                        for (let dx = -1; dx <= 1; dx++) {
+                            let ni = ((y + dy) * width + (x + dx)) * 4;
+                            data[ni] = data[ni + 1] = data[ni + 2] = 0;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 
-  removeNoise(data, canvas.width, canvas.height);
-  dilate(data, canvas.width, canvas.height, 3); // ضخیم‌تر شدن خطوط با ۳ بار تکرار
-
-  ctx.putImageData(imageData, 0, 0);
-  document.body.appendChild(canvas);
+    dilate(data, canvas.width, canvas.height);
+    ctx.putImageData(imageData, 0, 0);
 }
+
+document.getElementById("upload").addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const img = new Image();
+    img.onload = function() {
+        enhanceText(img);
+    }
+    img.src = URL.createObjectURL(file);
+});
+</script>
+
+</body>
+</html>
