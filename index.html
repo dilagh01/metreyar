@@ -2,21 +2,28 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>استخراج متن قرآن (بهینه)</title>
+<title>استخراج متن قرآن با نوار پیشرفت</title>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
 <style>
 body { font-family: sans-serif; text-align: center; margin-top: 30px; }
 #canvas { max-width: 90%; border: 1px solid #000; margin-top: 20px; }
 textarea { width: 90%; height: 250px; margin-top: 20px; font-size: 1.3rem; direction: rtl; text-align: right; }
 button { font-size: 1rem; margin-top: 10px; padding: 8px 16px; }
+#progress-container { width: 90%; height: 20px; border: 1px solid #333; margin: 15px auto; }
+#progress-bar { height: 100%; width: 0%; background-color: #4caf50; transition: width 0.2s; }
 </style>
 </head>
 <body>
 
-<h1>استخراج متن قرآن (بهینه)</h1>
+<h1>استخراج متن قرآن با نوار پیشرفت</h1>
 <input type="file" id="upload" accept="image/*"><br>
 <canvas id="canvas"></canvas><br>
-<button id="extract">استخراج متن</button><br>
+<button id="extract">استخراج متن</button>
+
+<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+
 <textarea id="output" placeholder="متن استخراج شده اینجا نمایش داده می‌شود"></textarea>
 
 <script>
@@ -30,8 +37,7 @@ document.getElementById("upload").addEventListener("change", function(e){
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
 
-        // افزایش اندازه تصویر برای OCR
-        canvas.width = imgElement.width * 2;
+        canvas.width = imgElement.width * 2; // بزرگ‌تر برای OCR بهتر
         canvas.height = imgElement.height * 2;
         ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
 
@@ -40,7 +46,7 @@ document.getElementById("upload").addEventListener("change", function(e){
         let data = imageData.data;
         for (let i = 0; i < data.length; i += 4) {
             let gray = (data[i] + data[i+1] + data[i+2]) / 3;
-            gray = gray * 1.2; // افزایش کمی کنتراست
+            gray = gray * 1.2; 
             if (gray > 255) gray = 255;
             data[i] = data[i+1] = data[i+2] = gray;
         }
@@ -51,14 +57,24 @@ document.getElementById("upload").addEventListener("change", function(e){
 });
 
 document.getElementById("extract").addEventListener("click", function(){
+    const progressBar = document.getElementById("progress-bar");
+    progressBar.style.width = '0%';
+    document.getElementById("output").value = '';
+
     Tesseract.recognize(
         imgElement,
         'ara',
         {
-            logger: m => console.log(m),
+            logger: m => {
+                if (m.status === 'recognizing text') {
+                    let percent = Math.round(m.progress * 100);
+                    progressBar.style.width = percent + '%';
+                }
+            },
             tessedit_pageseg_mode: Tesseract.PSM.SINGLE_BLOCK
         }
     ).then(({ data: { text } }) => {
+        progressBar.style.width = '100%';
         document.getElementById("output").value = text;
     });
 });
