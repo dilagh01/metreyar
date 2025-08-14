@@ -47,7 +47,7 @@ jobs:
 
       # 5. Upload artifact برای دانلود از Actions
       - name: Upload HTML results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ocr-html-results
           path: output_html/
