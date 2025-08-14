@@ -2,17 +2,18 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>استخراج متن از تصویر (خاکستری)</title>
+<title>استخراج متن قرآن (بهینه)</title>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
 <style>
-body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+body { font-family: sans-serif; text-align: center; margin-top: 30px; }
 #canvas { max-width: 90%; border: 1px solid #000; margin-top: 20px; }
-textarea { width: 90%; height: 200px; margin-top: 20px; font-size: 1rem; }
+textarea { width: 90%; height: 250px; margin-top: 20px; font-size: 1.3rem; direction: rtl; text-align: right; }
+button { font-size: 1rem; margin-top: 10px; padding: 8px 16px; }
 </style>
 </head>
 <body>
 
-<h1>استخراج متن از تصویر قرآن (خاکستری)</h1>
+<h1>استخراج متن قرآن (بهینه)</h1>
 <input type="file" id="upload" accept="image/*"><br>
 <canvas id="canvas"></canvas><br>
 <button id="extract">استخراج متن</button><br>
@@ -28,16 +29,20 @@ document.getElementById("upload").addEventListener("change", function(e){
     imgElement.onload = () => {
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
-        canvas.width = imgElement.width;
-        canvas.height = imgElement.height;
-        ctx.drawImage(imgElement, 0, 0);
 
-        // تبدیل تصویر به خاکستری برای OCR-friendly شدن
+        // افزایش اندازه تصویر برای OCR
+        canvas.width = imgElement.width * 2;
+        canvas.height = imgElement.height * 2;
+        ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
+
+        // تبدیل به خاکستری و افزایش کنتراست
         let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         let data = imageData.data;
         for (let i = 0; i < data.length; i += 4) {
-            let avg = (data[i] + data[i+1] + data[i+2]) / 3;
-            data[i] = data[i+1] = data[i+2] = avg;
+            let gray = (data[i] + data[i+1] + data[i+2]) / 3;
+            gray = gray * 1.2; // افزایش کمی کنتراست
+            if (gray > 255) gray = 255;
+            data[i] = data[i+1] = data[i+2] = gray;
         }
         ctx.putImageData(imageData, 0, 0);
     }
@@ -48,8 +53,11 @@ document.getElementById("upload").addEventListener("change", function(e){
 document.getElementById("extract").addEventListener("click", function(){
     Tesseract.recognize(
         imgElement,
-        'ara', // زبان عربی
-        { logger: m => console.log(m) }
+        'ara',
+        {
+            logger: m => console.log(m),
+            tessedit_pageseg_mode: Tesseract.PSM.SINGLE_BLOCK
+        }
     ).then(({ data: { text } }) => {
         document.getElementById("output").value = text;
     });
