@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>پردازش تصویر</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        canvas { border: 1px solid #000; margin-top: 20px; }
+        /* فونت اصلی قابل زوم */
+        html {
+            font-size: 16px; /* پایه برای rem */
+        }
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            margin-top: 3rem; 
+        }
+        h1 { 
+            font-size: 2rem; /* قابل تغییر با زوم مرورگر */
+        }
+        input { 
+            font-size: 1rem; 
+        }
+        canvas { 
+            border: 1px solid #000; 
+            margin-top: 2rem; 
+            max-width: 90%; /* برای موبایل و بزرگ‌نمایی */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +46,6 @@ function enhanceText(imageElement) {
     let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let data = imageData.data;
 
-    // تبدیل تصویر به سیاه و سفید براساس روشنایی
     for (let i = 0; i < data.length; i += 4) {
         const r = data[i];
         const g = data[i + 1];
@@ -41,7 +59,6 @@ function enhanceText(imageElement) {
         }
     }
 
-    // اعمال Dilate
     function dilate(data, width, height) {
         let copy = new Uint8ClampedArray(data);
         for (let y = 1; y < height - 1; y++) {
