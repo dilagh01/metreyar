@@ -19,36 +19,29 @@ jobs:
           flutter-version: '3.32.6'
           channel: stable
 
-      - name: Create new Flutter project
-        run: flutter create app
-
       - name: Get dependencies
-        working-directory: ./app
         run: flutter pub get
 
       - name: Build Android APK
-        working-directory: ./app
         run: flutter build apk --release
 
       - name: Build Android AppBundle
-        working-directory: ./app
         run: flutter build appbundle --release
 
       - name: Build Flutter Web
-        working-directory: ./app
         run: flutter build web --base-href "/metreyar/"
 
       - name: Upload build outputs
         uses: actions/upload-artifact@v4
         with:
           name: flutter-builds-android-web
-          path: ./app/build/**
+          path: build/**
 
       - name: Deploy Web to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./app/build/web
+          publish_dir: ./build/web
 
   build-ios:
     runs-on: macos-latest
@@ -65,17 +58,15 @@ jobs:
           channel: stable
 
       - name: Get dependencies
-        working-directory: ./app
         run: flutter pub get
 
       - name: Build iOS IPA
-        working-directory: ./app
         run: |
           flutter build ios --release --no-codesign
-          # اگر certificate و provisioning profile دارید، کد signing اضافه شود
+          # اگر certificate و provisioning profile دارید، اینجا کد signing اضافه کنید
 
       - name: Upload iOS build
         uses: actions/upload-artifact@v4
         with:
           name: flutter-ios-build
-          path: ./app/build/ios/ipa
+          path: build/ios/ipa
