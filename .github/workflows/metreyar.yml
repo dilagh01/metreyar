@@ -1,18 +1,81 @@
-name: my_app
-description: A new Flutter project
-publish_to: 'none'
-version: 1.0.0+1
+name: Flutter Multi-Platform Build & Deploy
 
-environment:
-  sdk: ">=3.0.0 <4.0.0"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
 
-dependencies:
-  flutter:
-    sdk: flutter
+jobs:
+  build-android-web:
+    runs-on: ubuntu-latest
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-flutter:
-  uses-material-design: true
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.6'
+          channel: stable
+
+      - name: Create new Flutter project
+        run: flutter create app
+
+      - name: Get dependencies
+        working-directory: ./app
+        run: flutter pub get
+
+      - name: Build Android APK
+        working-directory: ./app
+        run: flutter build apk --release
+
+      - name: Build Android AppBundle
+        working-directory: ./app
+        run: flutter build appbundle --release
+
+      - name: Build Flutter Web
+        working-directory: ./app
+        run: flutter build web --base-href "/metreyar/"
+
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-builds-android-web
+          path: ./app/build/**
+
+      - name: Deploy Web to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/build/web
+
+  build-ios:
+    runs-on: macos-latest
+    needs: build-android-web
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.6'
+          channel: stable
+
+      - name: Get dependencies
+        working-directory: ./app
+        run: flutter pub get
+
+      - name: Build iOS IPA
+        working-directory: ./app
+        run: |
+          flutter build ios --release --no-codesign
+          # اگر certificate و provisioning profile دارید، کد signing اضافه شود
+
+      - name: Upload iOS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-ios-build
+          path: ./app/build/ios/ipa
