@@ -1,43 +1,62 @@
-name: Flutter Setup, Build & Deploy to GitHub Pages
+name: Flutter Build & Deploy
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    branches: [ "main" ]
+  pull_request:
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. دریافت کدها
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Flutter
+      # 2. نصب Flutter پایدار
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.1'
+          flutter-version: '3.32.6'
           channel: stable
 
-      - name: Clean previous Flutter project files (platform & build folders only)
+      # 3. بررسی نسخه‌ها
+      - name: Verify versions
         run: |
-          rm -rf android ios linux macos windows build pubspec.lock .flutter-plugins .flutter-plugins-dependencies
+          flutter --version
+          dart --version
 
+      # 4. نصب وابستگی‌ها (دایرکتوری پروژه)
       - name: Get dependencies
+        working-directory: ./app
         run: flutter pub get
 
-      - name: Enable web support
-        run: flutter config --enable-web
+      # 5. بیلد APK اندروید
+      - name: Build APK
+        working-directory: ./app
+        run: flutter build apk --release
 
-      - name: Build Flutter Web with base href
-        run: flutter build web --release --base-href "/metreyar_flutter_web/"
+      # 6. بیلد App Bundle اندروید
+      - name: Build AppBundle
+        working-directory: ./app
+        run: flutter build appbundle --release
 
+      # 7. بیلد وب
+      - name: Build Flutter Web
+        working-directory: ./app
+        run: flutter build web --base-href "/metreyar/"
+
+      # 8. آپلود خروجی‌ها به Artifact
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-builds
+          path: ./app/build/**
+
+      # 9. انتشار وب روی GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/web
-          publish_branch: gh-pages
+          publish_dir: ./app/build/web
