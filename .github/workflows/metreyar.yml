@@ -11,16 +11,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Flutter 4.0.0
+      - name: Setup Flutter (base stable)
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '4.0.0'
-          channel: 'stable'
+          flutter-version: 'stable'
+          channel: stable
 
-      - name: Verify versions
+      - name: Switch to Flutter 4.x exact version
         run: |
+          cd $FLUTTER_ROOT
+          git fetch --tags
+          git checkout 4.0.0   # 👈 اینجا دقیقاً نسخه مورد نظر رو بزن
           flutter --version
           dart --version
 
