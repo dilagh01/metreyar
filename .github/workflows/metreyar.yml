@@ -2,8 +2,8 @@ name: Flutter Multi-Platform Build & Deploy
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
+    branches:
+      - main
 
 jobs:
   build-android-web:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.32.6'
+          flutter-version: '3.24.5'
           channel: stable
 
       - name: Get dependencies
@@ -41,32 +41,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
-
-  build-ios:
-    runs-on: macos-latest
-    needs: build-android-web
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.32.6'
-          channel: stable
-
-      - name: Get dependencies
-        run: flutter pub get
-
-      - name: Build iOS IPA
-        run: |
-          flutter build ios --release --no-codesign
-          # اگر certificate و provisioning profile دارید، اینجا کد signing اضافه کنید
-
-      - name: Upload iOS build
-        uses: actions/upload-artifact@v4
-        with:
-          name: flutter-ios-build
-          path: build/ios/ipa
+          publish_dir: build/web
