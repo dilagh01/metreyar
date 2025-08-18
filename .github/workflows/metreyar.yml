@@ -1,47 +1,43 @@
-name: Flutter Build
+name: Flutter Setup, Build & Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # ۱. دریافت کدها
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      # ۲. نصب Flutter نسخه پایدار ۳.۳۲.۶
-      - name: Setup Flutter
+      - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.32.6'
+          flutter-version: '3.22.1'
           channel: stable
 
-      # ۳. بررسی نسخه‌ها
-      - name: Verify versions
+      - name: Clean previous Flutter project files (platform & build folders only)
         run: |
-          flutter --version
-          dart --version
+          rm -rf android ios linux macos windows build pubspec.lock .flutter-plugins .flutter-plugins-dependencies
 
-      # ۴. نصب وابستگی‌ها
-      - name: Install dependencies
+      - name: Get dependencies
         run: flutter pub get
 
-      # ۵. بیلد APK
-      - name: Build APK (release)
-        run: flutter build apk --release
+      - name: Enable web support
+        run: flutter config --enable-web
 
-      # ۶. بیلد App Bundle
-      - name: Build App Bundle (release)
-        run: flutter build appbundle --release
+      - name: Build Flutter Web with base href
+        run: flutter build web --release --base-href "/metreyar_flutter_web/"
 
-      # ۷. آپلود خروجی‌ها
-      - name: Upload build outputs
-        uses: actions/upload-artifact@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: flutter-builds
-          path: build/app/outputs/**
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
+          publish_branch: gh-pages
