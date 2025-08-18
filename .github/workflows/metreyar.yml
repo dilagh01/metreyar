@@ -10,32 +10,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ۱. دریافت کدها
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Flutter (base stable)
+      # ۲. نصب Flutter نسخه پایدار ۳.۳۲.۶
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: '3.32.6'
           channel: stable
 
-      - name: Switch to Flutter 4.x exact version
+      # ۳. بررسی نسخه‌ها
+      - name: Verify versions
         run: |
-          cd $FLUTTER_ROOT
-          git fetch --tags
-          git checkout 4.0.0   # 👈 اینجا دقیقاً نسخه مورد نظر رو بزن
           flutter --version
           dart --version
 
+      # ۴. نصب وابستگی‌ها
       - name: Install dependencies
         run: flutter pub get
 
+      # ۵. بیلد APK
       - name: Build APK (release)
         run: flutter build apk --release
 
+      # ۶. بیلد App Bundle
       - name: Build App Bundle (release)
         run: flutter build appbundle --release
 
+      # ۷. آپلود خروجی‌ها
       - name: Upload build outputs
         uses: actions/upload-artifact@v4
         with:
