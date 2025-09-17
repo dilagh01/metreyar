@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="نوین متره یک سامانه آنلاین محاسبه متره، برآورد و صورت وضعیت آنلاین می باشد
+     که بر اساس فهرست بهای سالیانه این امکان را به کاربران می دهد که به سادگی محاسبات خود را انجام داده و بطور آنلاین به همه طرف های پیمان مانند کارفرما،
+     پیمانکار، مشاور، و غیره را اطلاع رسانی کنند تا با جمع آوری نظرات و محاسبات سایرین
+      با کمترین هزینه و در سریع ترین زمان ممکن و با بیشترین دقت به و جمع بندی تایید نهایی برسند.  ">
+
+    <meta name="author" content="تیم نوین متره">
+    <meta name=”robots” content="index, follow">
+    <title>وبلاگ نوین متره (نرم افزار آنلاین محاسبه متره و برآورد)</title>
+
+    <!-- Bootstrap -->
+    <link href="../static/weblog/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/cubeportfolio.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/bootsnav.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/blue.css">
+    <link rel="icon" href="../static/images/favicon.ico">
+</head>
+
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<!--Page Loader-->
+<div class="loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<!--Page Loader ends-->
+
+<!--Header Starts-->
+<header class="default">
+    <nav class="navbar navbar-default navbar-fixed bootsnav">
+        <div class="container">
+            <div class="menu-icon">
+                <span></span>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index/index.html">
+                    <img src="../static/images/svg.svg" class="logo logo-display" alt="لوگوی نوین متره">
+                    
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active">
+                        <a href="../index/index.html" class="scroll">خانه</a></li>
+                    <li><a href="16#features" class="scroll">ویژگی ها</a></li>
+                    
+                    
+                    <li><a href="16#maxo_news" class="scroll"> اخبار</a></li>
+
+                    <li><a href="../blog/0">بلاگ</a></li>
+                    <li><a href="16#contactus" class="scroll">تماس</a></li>
+                    
+                    <li><a target="blank" href="../login/index.html">ورود</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Header ends-->
+
+<!--Full Menu-->
+<section class="overlay-menu">
+    <div class="menu-icon active">
+        <span></span>
+    </div>
+    <div class="centered">
+        <div class="container">
+            <div class="row">
+                
+                
+                
+                
+                
+                <div class="col-sm-12 columns half text-right">
+                    <ul class="full-nav top20 heading_space">
+                        <li class="active"><span>01.</span> <a href="16#home" class="scroll">خانه</a></li>
+                        <li><span>02.</span> <a href="16#features" class="scroll">ویژگی ها</a></li>
+                        <li><span>03.</span> <a href="../simple_register/index.html"> ثبت نام</a></li>
+                        <li><span>04.</span> <a href="../login/index.html">ورود</a></li>
+                        <li><span>05.</span> <a href="16#maxo_news" class="scroll"> اخبار</a></li>
+                        
+                        <li><span>06.</span> <a href="16#contactus" class="scroll">تماس</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-12">
+                    <ul class="social">
+                        
+                        
+                        <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                        <li><a href="https://t.me/novin_metre" target="_blank"><i class="fa fa-telegram"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Full Menu-->
+
+    <!--Page Header-->
+    <section id="page_header" class="page-header padding_top">
+        <div class="container header_content padding_top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-uppercase whitecolor bottom10">بلاگ</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="../index/index.html">خانه</a></li>
+                        <li>بلاگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends-->
+
+    <!-- Our Blog -->
+    <section id="ourblog" class=" padding_bottom padding_top_half">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 padding_top_half">
+                    
+    <div class="blog_item">
+        <div>
+            <img src="../media/post_images/Business_Process_Analysis_1.webp" alt="blog" style="height: 30vh !important; width: 40vw !important;">
+        </div>
+
+
+        <div class="blog_author flat top20">
+            <p class="metas"><i class="fa fa-user"></i> <span>سعید</span></p>
+            <p class="metas"><i class="fa fa-calendar"></i> <span>1404-3-15</span></p>
+            <p class="metas"><i class="fa fa-folder-open"></i> <span>آنالیز بها, تجزیه بها, آنالیز فهرست بها, </span></p>
+        </div>
+        <h2 class="top40 darkcolor bottom25">همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</h2>
+        <div class="alert alert-dark"
+             style="background-color: lightgrey !important; border-color: darkgray !important;">
+            در این مقاله، با آموزش گام‌به‌گام آنالیز بها، نحوه تهیه قیمت‌های دقیق و کاربرد آن در مدیریت پروژه‌های عمرانی را بررسی کرده‌ایم.
+        </div>
+        <hr>
+        <h1 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">چگونه می&zwnj;توان مطمئن شد که قیمت پیشنهادی پیمانکار، منطقی و واقع&zwnj;بینانه است؟ این پرسش بسیاری از مهندسان دفتر فنی بوده که پاسخ آن در تسلط بر آنالیز بها نهفته است. اگر می&zwnj;خواهید در پروژه&zwnj;های عمرانی تصمیمات حرفه&zwnj;ای&zwnj;تری بگیرید، هزینه&zwnj;ها را با دقت بالا کنترل کنید و در مناقصات رقابت&zwnj;پذیرتر شوید، وقت آن است که با مفاهیم و اصول آنالیز فهرست بها به&zwnj;صورت دقیق و عملی آشنا شوید. </span></span></h1>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">آنالیز بها چیست؟</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آنالیز یا تجزیه بها، به معنی بررسی دقیق و مرحله&zwnj;به&zwnj;مرحله هزینه&zwnj;های مربوط به یک فعالیت اجرایی است. در این فرآیند، اجزای اصلی مثل نیروی انسانی، مصالح، ماشین&zwnj;آلات و حمل&zwnj;ونقل به&zwnj;صورت جداگانه بررسی و قیمت&zwnj;گذاری می&zwnj;شوند. هدف از این کار این است که بتوان تصویر روشنی از هزینه واقعی هر آیتم پروژه به دست آورد. آنالیز فهرست بها به مهندسان و پیمانکاران کمک می&zwnj;کند تا قیمت&zwnj;ها را دقیق&zwnj;تر محاسبه کنند، منابع را بهتر مدیریت کنند و جلوی مشکلات مالی یا کسری بودجه را بگیرند.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">مولفه<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های آنالیز بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">مولفه&zwnj;های تشکیل&zwnj;دهنده تجزیه فهرست بها پایه&zwnj; و اساس محاسبات قیمتی در پروژه&zwnj;های عمرانی و ساختمانی محسوب می&zwnj;شوند و بررسی آن&zwnj;ها به&zwnj;صورت مجزا، به درک بهتر ساختار هزینه&zwnj;ای هر آیتم کمک می&zwnj;کند. چهار مولفه اصلی در فرآیند آنالیز بها به شرح زیر هستند:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>نیروی انسانی</strong>: شامل هزینه دستمزد کارگران، تکنسین&zwnj;ها، اپراتورها، مهندسان و هر فردی است که مستقیماً در اجرای فعالیت حضور دارد. این بخش یکی از متغیرترین و تاثیرگذارترین اجزای آنالیز فهرست بهاست.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>مصالح و مواد مصرفی</strong>: هزینه تامین، خرید و انبار کردن مواد اولیه و مصالح مورد استفاده در عملیات عمرانی را دربرمی&zwnj;گیرد. نرخ این اقلام معمولاً از فهرست بهای پایه یا منابع معتبر استخراج می&zwnj;شود.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ماشین&zwnj;آلات و تجهیزات</strong>: هزینه استهلاک، اجاره، مصرف سوخت و بهره&zwnj;برداری از تجهیزات و ماشین&zwnj;آلات مورد نیاز برای انجام فعالیت&zwnj;های اجرایی در این بخش لحاظ می&zwnj;گردد.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>حمل&zwnj;ونقل</strong>: شامل هزینه جابه&zwnj;جایی نیروی کار، مصالح، تجهیزات و ماشین&zwnj;آلات بین محل پروژه و منابع تامین یا نقاط مصرف است. این هزینه&zwnj;ها بسته به موقعیت پروژه و فاصله مبدا تا مقصد متغیر هستند.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="چرا باید آنالیز بها انجام دهیم؟" src="../media/post_inner_images/what-is-the-data-analysis-process.webp" style="height:667px; width:1000px" /></span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">5 علت کلیدی ضرورت انجام آنالیز بها</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تهیه آنالیز فهرست بها صرفاً یک کار اداری نیست، بلکه یک ابزار استراتژیک برای مدیریت ریسک، افزایش دقت مالی و اثبات شفافیت عملکرد پیمانکار در پروژه&zwnj;های عمرانی و اجرایی است. بدون یک آنالیز دقیق، تخمین هزینه پروژه چیزی جز حدس و گمان نخواهد بود. در ادامه 5 دلیل کلیدی نیاز به انجام آنالیز فهرست بها را بررسی می&zwnj;کنیم.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">1. کاهش ریسک مالی و جلوگیری از ضرر پیمانکار</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پیمانکاری که بدون محاسبه دقیق منابع مصرفی، نرخ&zwnj;ها و ضرایب اقدام به قیمت&zwnj;گذاری می&zwnj;کند، در واقع در حال پذیرش ریسک ضرر مالی در طول اجرای پروژه است. آنالیز فهرست بها به پیمانکار کمک می&zwnj;کند تا پیش از ورود به پروژه، تصویر شفافی از سود و زیان احتمالی داشته باشد و پیشنهاد خود را بر پایه واقعیت&zwnj;های اجرایی تنظیم کند.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">2. تقویت قدرت مذاکره در مناقصه با آنالیز بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">وقتی کارفرما یا مشاور پروژه در مورد منطقی بودن قیمت پیشنهادی پرس&zwnj;وجو می&zwnj;کند، داشتن یک آنالیز دقیق و مستند، به پیمانکار این قدرت را می&zwnj;دهد که از رقم ارائه&zwnj;شده دفاع کند و آن را با جزئیات توجیه&zwnj;پذیر نشان دهد. این موضوع به&zwnj;ویژه در مناقصات رقابتی اهمیت زیادی دارد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="قدرت مذاکره بالا در مناقصه با آنالیز بها" src="../media/post_inner_images/iStock_000053700494_Double_optimized__2_.jpg" style="height:563px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">3. مستندسازی فنی آنالیز بها برای مراحل بعدی پروژه</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در پروژه&zwnj;های عمرانی، تجزیه فهرست بها تبدیل به یک مرجع فنی قابل رجوع می&zwnj;شود. اگر در میانه یا پایان پروژه اختلافاتی درباره قیمت&zwnj;گذاری یک آیتم، نحوه محاسبه هزینه یا درخواست تعدیل هزینه&zwnj;ها پیش بیاید، تجزیه بها می&zwnj;تواند شفافیت لازم را فراهم کرده و از تضادهای پرهزینه جلوگیری کند.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">4. کمک به تصمیم&zwnj;گیری در تخصیص منابع</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">زمانی که منابع محدودند، چه از نظر مالی و چه از نظر تجهیزات یا نیروی انسانی، آنالیز فهرست بها به مدیر پروژه کمک می&zwnj;کند تا بداند کدام بخش از کار بیشترین بار مالی را دارد و باید مدیریت و کنترل دقیق&zwnj;تری روی آن اعمال شود.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">5. الزامی در اسناد مناقصه و ارزیابی صلاحیت</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در بسیاری از پروژه&zwnj;ها، ارائه آنالیز بها همراه با پیشنهاد قیمت، بخشی الزامی از اسناد مناقصه است. نبود این فایل نه تنها می&zwnj;تواند باعث رد پیشنهاد شود، بلکه در ارزیابی فنی نیز امتیاز منفی به دنبال دارد. وجود یک آنالیز دقیق، نشان&zwnj;دهنده حرفه&zwnj;ای بودن تیم برآورد و آمادگی کامل پیمانکار برای اجرای پروژه است.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">آموزش آنالیز بها با استفاده از پنل نوین متره</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای تهیه آنالیز فهرست بها، باید به&zwnj;صورت مرحله&zwnj;به&zwnj;مرحله و با دقت بالا، مقدار و هزینه منابع مصرفی هر فعالیت اجرایی را محاسبه کنید. این فرآیند شامل چند گام مشخص است که در ادامه توضیح داده می&zwnj;شود.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">شناسایی فعالیت اجرایی و آیتم مورد نظر</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ابتدا مشخص کنید که آنالیز مربوط به کدام ردیف از فهرست بهای منتشر شده توسط سازمان برنامه و بودجه است. هر ردیف شامل شرح فعالیت، واحد اندازه&zwnj;گیری و کد مشخص است.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">استخراج منابع مصرفی از فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در فهرست بها، برای هر آیتم، ترکیب منابع مورد نیاز مانند نیروی انسانی، ماشین&zwnj;آلات، مصالح و... تعیین شده است. این ترکیب&zwnj;ها معمولاً با عبارات &laquo;نفر-ساعت&raquo;، &laquo;دستگاه-ساعت&raquo; یا &laquo;کیلوگرم&raquo; بیان می&zwnj;شوند. مثلاً برای اجرای یک مترمربع آسفالت، ممکن است به 0.5 نفر-ساعت کارگر، 0.2 دستگاه-ساعت فینیشر و 60 کیلوگرم قیر نیاز باشد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><img alt="آنالیز بها در پنل کاربری نوین متره" src="../media/post_inner_images/1_PbK1P6D.PNG" style="height:473px; width:1000px" /></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">دریافت قیمت&zwnj;های به&zwnj;روز هر منبع برای آنالیز بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در این مرحله، باید بدانید که هر یک از منابع مورد نیاز چه قیمتی دارد. در پنل کاربری سایت نوین متره، با ورود به بخش &laquo;آنالیز&raquo;، می&zwnj;توانید به لیست قیمت&zwnj;های به&zwnj;روز و طبقه&zwnj;بندی&zwnj;شده بر اساس سال انتشار دسترسی داشته باشید. این اطلاعات شامل نرخ دستمزدها، بهای ماشین&zwnj;آلات، قیمت مصالح و سایر عوامل اجرایی است. این ویژگی باعث می&zwnj;شود بدون نیاز به جستجوی پراکنده در منابع مختلف، به&zwnj;راحتی قیمت دقیق هر آیتم را داشته باشید.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="قیمت به روز مولفه‌های آنالیز بها" src="../media/post_inner_images/2.PNG" style="height:472px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضرب قیمت در مقدار مصرف</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پس از مشخص شدن مقدار و نرخ هر عامل، کافی است مقدار مصرف را در قیمت واحد ضرب کنید تا هزینه جزئی هر منبع به دست آید. مجموع این مبالغ، هزینه خام اجرای آن آیتم را نشان می&zwnj;دهد.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">اعمال ضرایب فنی و مالی آنالیز بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در مرحله آخر از تهیه تجزیه فهرست بها، باید ضرایب مختلفی مانند ضریب بالاسری و ضریب عامل را به هزینه خام اضافه کنید تا قیمت نهایی آیتم برای پیشنهاد قیمت در مناقصه یا برآورد پروژه آماده شود. در برخی پروژه&zwnj;ها، بسته به شرایط کارفرما یا منطقه، ممکن است ضریب&zwnj;های خاصی نیز لحاظ شوند.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب عامل چیست و چه کاربردی دارد؟</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب عامل یکی از پارامترهای کلیدی در فرآیند آنالیز بها است که نقش مهمی در انطباق هزینه&zwnj;های محاسباتی با واقعیت&zwnj;های اجرایی پروژه ایفا می&zwnj;کند. این ضریب به&zwnj;عنوان یک فاکتور اصلاح&zwnj;گر، زمانی وارد محاسبات می&zwnj;شود که تفاوتی میان برآورد نظری و هزینه&zwnj;های واقعی یا اجرایی وجود داشته باشد. در ادامه 4 کاربرد ضریب عامل را بررسی خواهیم کرد.</span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">1. جبران ضایعات مصالح در آنالیز بها</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب عامل معمولاً در مواردی چون جبران پرت و ضایعات مصالح، تبدیل واحدهای متری به وزنی یا بالعکس و تعدیل هزینه در شرایط خاص اجرایی به&zwnj;کار می&zwnj;رود. به&zwnj;عنوان مثال، اگر اجرای یک فعالیت عمرانی نیاز به 200 واحد مصالح داشته باشد، ممکن است به دلیل تلفات حین اجرا، در عمل 210 واحد مورد نیاز باشد. در چنین شرایطی، ضریب عامل در آنالیز بها، با در نظر گرفتن درصد پرت، مقدار مصالح را واقع&zwnj;بینانه&zwnj;تر می&zwnj;سازد.</span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">2. تفاوت واحد اندازه<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>گیری</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">زمانی که واحد اندازه&zwnj;گیری در فهرست بها با واحد خرید در بازار متفاوت است (مثلاً متر طول در برابر کیلوگرم)، ضریب عامل به&zwnj;عنوان ابزاری برای تبدیل دقیق و اصولی به کار می&zwnj;رود. </span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">3. تعدیل هزینه آنالیز فهرست بها</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در پروژه&zwnj;هایی با موقعیت&zwnj;های اجرایی خاص مانند اختلاف ارتفاع طبقات یا دشواری حمل&zwnj;ونقل، ضریب عامل به تعدیل هزینه&zwnj;ها بر اساس شرایط فنی و محیطی کمک می&zwnj;کند. همچنین، گاهی حتی با دقیق&zwnj;ترین آنالیز ممکن، هزینه نهایی اجرای فعالیت با قیمت&zwnj;های روز بازار تفاوت دارد. در این حالت، با اعمال یک ضریب منطقی، مبلغ آنالیز شده به نرخ واقعی نزدیک می&zwnj;شود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><img alt="ضریب عامل برای حاشیه سود پیمانکار در آنالیز بها" src="../media/post_inner_images/Improve-retail-sales.jpg.webp" style="height:560px; width:1000px" /></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">4. حاشیه سود پیمانکار</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای برآورد قیمت پیشنهادی در مناقصه&zwnj;ها، ضریب عامل نقش کلیدی در افزودن حاشیه سود ایفا می&zwnj;کند؛ به این صورت که پس از محاسبه دقیق هزینه&zwnj;های واقعی هر آیتم، با اعمال ضریب، مبلغ نهایی طوری تنظیم می&zwnj;شود که هم مخارج پوشش داده شود و هم سود منطقی برای پیمانکار لحاظ گردد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در نهایت، ضریب عامل ابزاری انعطاف&zwnj;پذیر و ضروری در دست مترور یا مدیر پروژه است تا هزینه&zwnj;ها را با دقت بالاتری برآورد کرده و به قیمت&zwnj;گذاری منصفانه&zwnj;تری برسد.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">جمع&zwnj;بندی</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تسلط بر آنالیز بها، به معنای کنترل بهتر هزینه&zwnj;ها، مدیریت موثر منابع و ارتقاء شفافیت مالی در پروژه است. با بهره&zwnj;گیری از ابزارهایی مانند پنل نوین متره و اعمال ضرایب دقیق، می&zwnj;توان هزینه هر آیتم اجرایی را به&zwnj;درستی تخمین زد و در رقابت&zwnj;های مناقصه&zwnj;ای، پیشنهادی مستند، علمی و رقابتی ارائه کرد. </span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">سوالات متداول</span></span></h2>
+
+<ol>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آیا می&zwnj;توان از آنالیز بها برای مقایسه قیمت پیمانکاران مختلف استفاده کرد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">بله، آنالیز بها با شفاف&zwnj;سازی هزینه&zwnj;های جزئی، امکان مقایسه دقیق و عادلانه بین پیشنهادهای مختلف پیمانکاران را فراهم می&zwnj;کند و معیار مناسبی برای انتخاب منطقی&zwnj;ترین گزینه است.</span></span></p>
+
+<ol start="2">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آیا آنالیز بها فقط برای مناقصات کاربرد دارد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">خیر، آنالیز بها علاوه بر مناقصه&zwnj;ها، در برآورد هزینه اولیه پروژه، کنترل بودجه حین اجرا و دفاع از صورت&zwnj;وضعیت&zwnj;ها در مراحل مختلف پروژه نیز کاربرد حیاتی دارد.</span></span></p>
+
+<ol start="3">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آنالیز بها در بهینه&zwnj;سازی زمان&zwnj;بندی پروژه چه کاربردی دارد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">با مشخص شدن منابع دقیق هر فعالیت، امکان اولویت&zwnj;بندی و زمان&zwnj;بندی واقع&zwnj;بینانه&zwnj;تر فراهم می&zwnj;شود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+    </div>
+    
+
+
+
+    <div class="postanchor heading_space">
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <div class="previous">
+                        <a href="15"> <i class="fa fa-angle-right"></i> مطلب
+                            قبلی</a>
+                        <p>با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب</p>
+                    </div>
+                
+            </div>
+            <span class="share bgdark"><i class="fa fa-share-alt"></i> </span>
+            <div class="share_purpose">
+                <ul class="social_simple">
+                    <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-telegram"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-left">
+                
+                    <div class="nextpost">
+                        <a href="17"> مطلب بعدی <i
+                                class="fa fa-angle-left"></i></a>
+                        <p>تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل</p>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="comments" class="row">
+        <h5 class="text-uppercase darkcolor heading bottom40">دیدگاه ها</h5>
+        <div>
+            
+        </div>
+        <form class="text-left" method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="fiw0FUSNAfiMKRRsEiMWQVuvHJKKPjoTO4JO6Jij5BeFfO0fJm6IZ0m7XPK8rJse">
+            
+
+<form  method="post" > <input type="hidden" name="csrfmiddlewaretoken" value="fiw0FUSNAfiMKRRsEiMWQVuvHJKKPjoTO4JO6Jij5BeFfO0fJm6IZ0m7XPK8rJse"> <div  
+    class="row" > <div  
+    class="col-md-4 col-sm-12"  dir="rtl"> <div id="div_id_name" class="form-group"> <label for="id_name" class=" requiredField">
+                نام<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="15" class="textinput textInput form-control" required id="id_name"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                آدرس ایمیل<span class="asteriskField">*</span> </label> <div class=""> <input type="email" name="email" maxlength="254" class="emailinput form-control" required id="id_email"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_mobile_number" class="form-group"> <label for="id_mobile_number" class=" requiredField">
+                شماره موبایل<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="mobile_number" maxlength="15" class="textinput textInput form-control" required id="id_mobile_number"> </div> </div> </div>
+<div  
+    class="col-sm-12" > <div id="div_id_message" class="form-group"> <label for="id_message" class=" requiredField">
+                پیام شما<span class="asteriskField">*</span> </label> <div class=""> <textarea name="message" cols="40" rows="10" maxlength="100" class="textarea form-control" required id="id_message">
+</textarea> </div> </div> </div>
+
+</div>
+<div  
+    class="row"  style="display: flex; align-items: center;"> <div  
+    class="col-sm-6" > <div id="div_id_captcha" class="form-group"> <label for="id_captcha_1" class=" requiredField">
+                Captcha<span class="asteriskField">*</span> </label> <div class=""> <img src="../captcha/image/83790ed17f82b060923ed14a110a272eeb863350/index.html" alt="captcha" class="captcha" />
+<input type="hidden" name="captcha_0" value="83790ed17f82b060923ed14a110a272eeb863350" class="hiddeninput" required id="id_captcha_0"><input type="text" name="captcha_1" class="captchaanswerinput" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"> </div> </div> </div>
+<input id="sbtn" type="submit" class="col-sm-5 btn btn-primary p-1" value= ذخیره>
+</div> </form>
+
+        </form>
+    </div>
+
+
+                </div>
+                <aside class="col-md-offset-1 col-md-3 col-sm-4 padding_top_half">
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase darkcolor bottom15">جستجو</h4>
+                        <form class="widget_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon"><i class="fa fa-search"></i> </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">دسته</h4>
+                        <ul class="category" style="padding: 0 !important;">
+                            <li><a href="../blog/0">همه
+                                <span>12</span></a>
+                                
+                                    <li><a href="../blog/1">خبر
+                                        <span>6</span></a>
+                                    </li>
+                                
+                                    <li><a href="../blog/2">آموزشی
+                                        <span>6</span></a>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">جدید ها</h4>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="16#">
+                                        <img class="media-object" src=/media/post_images/%D8%AA%D8%B9%D8%AF%DB%8C%D9%84_%D9%81%D9%87%D8%B1%D8%B3%D8%AA_%D8%A8%D9%87%D8%A7_.jfif
+                                                alt=تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="17">تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="16#">
+                                        <img class="media-object" src=/media/post_images/Business_Process_Analysis_1.webp
+                                                alt=همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="16">همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="16#">
+                                        <img class="media-object" src=/media/post_images/Programming-Languages-for-Civil-Engineers.jpg
+                                                alt=با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="15">با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="16#">
+                                        <img class="media-object" src=/media/post_images/Quantity-Takeoff-Explained.jpg
+                                                alt=راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="14">راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+
+
+
+
+
+
+
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!--Our Blog ends-->
+
+
+
+<!--Footer starts-->
+<footer id="evy-footer" class="padding_half">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6 text-left">
+                <ul class="social top10">
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                    <li><a href="https://t.me/novinmetre"><i class="fa fa-telegram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer enda-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../static/weblog/js/jquery-2.2.3.js"></script>
+
+
+
+<script src="../static/weblog/js/bootstrap.min.js"></script>
+<script src="../static/weblog/js/bootsnav.js"></script>
+<script src="../static/weblog/js/jquery.easing.min.js"></script>
+<script src="../static/weblog/js/swiper.min.js"></script>
+<script src="../static/weblog/js/jquery.cubeportfolio.min.js"></script>
+<script src="../static/weblog/js/jquery.matchHeight-min.js"></script>
+<script src="../static/weblog/js/jquery.fancybox.min.js"></script>
+<script src="../static/weblog/js/jquery.parallax-1.1.3.js"></script>
+
+<script src="../static/weblog/js/jquery.themepunch.tools.min.js"></script>
+<script src="../static/weblog/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.actions.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.layeranimation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.navigation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.parallax.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.slideanims.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.kenburn.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.video.min.js"></script>
+<script src="../static/weblog/js/functions.js"></script>
+<script src="../static/js/toastr.min.js"></script>
+<script>
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>

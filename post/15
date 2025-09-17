@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="نوین متره یک سامانه آنلاین محاسبه متره، برآورد و صورت وضعیت آنلاین می باشد
+     که بر اساس فهرست بهای سالیانه این امکان را به کاربران می دهد که به سادگی محاسبات خود را انجام داده و بطور آنلاین به همه طرف های پیمان مانند کارفرما،
+     پیمانکار، مشاور، و غیره را اطلاع رسانی کنند تا با جمع آوری نظرات و محاسبات سایرین
+      با کمترین هزینه و در سریع ترین زمان ممکن و با بیشترین دقت به و جمع بندی تایید نهایی برسند.  ">
+
+    <meta name="author" content="تیم نوین متره">
+    <meta name=”robots” content="index, follow">
+    <title>وبلاگ نوین متره (نرم افزار آنلاین محاسبه متره و برآورد)</title>
+
+    <!-- Bootstrap -->
+    <link href="../static/weblog/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/cubeportfolio.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/bootsnav.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/blue.css">
+    <link rel="icon" href="../static/images/favicon.ico">
+</head>
+
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<!--Page Loader-->
+<div class="loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<!--Page Loader ends-->
+
+<!--Header Starts-->
+<header class="default">
+    <nav class="navbar navbar-default navbar-fixed bootsnav">
+        <div class="container">
+            <div class="menu-icon">
+                <span></span>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index/index.html">
+                    <img src="../static/images/svg.svg" class="logo logo-display" alt="لوگوی نوین متره">
+                    
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active">
+                        <a href="../index/index.html" class="scroll">خانه</a></li>
+                    <li><a href="15#features" class="scroll">ویژگی ها</a></li>
+                    
+                    
+                    <li><a href="15#maxo_news" class="scroll"> اخبار</a></li>
+
+                    <li><a href="../blog/0">بلاگ</a></li>
+                    <li><a href="15#contactus" class="scroll">تماس</a></li>
+                    
+                    <li><a target="blank" href="../login/index.html">ورود</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Header ends-->
+
+<!--Full Menu-->
+<section class="overlay-menu">
+    <div class="menu-icon active">
+        <span></span>
+    </div>
+    <div class="centered">
+        <div class="container">
+            <div class="row">
+                
+                
+                
+                
+                
+                <div class="col-sm-12 columns half text-right">
+                    <ul class="full-nav top20 heading_space">
+                        <li class="active"><span>01.</span> <a href="15#home" class="scroll">خانه</a></li>
+                        <li><span>02.</span> <a href="15#features" class="scroll">ویژگی ها</a></li>
+                        <li><span>03.</span> <a href="../simple_register/index.html"> ثبت نام</a></li>
+                        <li><span>04.</span> <a href="../login/index.html">ورود</a></li>
+                        <li><span>05.</span> <a href="15#maxo_news" class="scroll"> اخبار</a></li>
+                        
+                        <li><span>06.</span> <a href="15#contactus" class="scroll">تماس</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-12">
+                    <ul class="social">
+                        
+                        
+                        <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                        <li><a href="https://t.me/novin_metre" target="_blank"><i class="fa fa-telegram"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Full Menu-->
+
+    <!--Page Header-->
+    <section id="page_header" class="page-header padding_top">
+        <div class="container header_content padding_top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-uppercase whitecolor bottom10">بلاگ</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="../index/index.html">خانه</a></li>
+                        <li>بلاگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends-->
+
+    <!-- Our Blog -->
+    <section id="ourblog" class=" padding_bottom padding_top_half">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 padding_top_half">
+                    
+    <div class="blog_item">
+        <div>
+            <img src="../media/post_images/Programming-Languages-for-Civil-Engineers.jpg" alt="blog" style="height: 30vh !important; width: 40vw !important;">
+        </div>
+
+
+        <div class="blog_author flat top20">
+            <p class="metas"><i class="fa fa-user"></i> <span>سعید</span></p>
+            <p class="metas"><i class="fa fa-calendar"></i> <span>1404-2-30</span></p>
+            <p class="metas"><i class="fa fa-folder-open"></i> <span>فهرست بها, ضرایب فهرست بها, ضریب بالاسری, ضریب طبقات, </span></p>
+        </div>
+        <h2 class="top40 darkcolor bottom25">با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب</h2>
+        <div class="alert alert-dark"
+             style="background-color: lightgrey !important; border-color: darkgray !important;">
+            می‌خواهید قیمت‌گذاری پروژه‌تان دقیق و واقعی باشد؟ ضرایب فهرست بها را بشناسید؛ این مقاله راهنمایی سریع، ساده و کاربردی برای درک و محاسبه آن‌هاست.
+        </div>
+        <hr>
+        <h1 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در تنظیم صورت&zwnj;وضعیت&zwnj; پروژه&zwnj;های عمرانی، صرفاً داشتن قیمت&zwnj;های فهرست بها کافی نیست و به ضرایب فهرست بها نیاز داریم. چرا؟ چون قیمت&zwnj;های درج&zwnj;شده در فهرست بها، بر مبنای شرایطی استاندارد، عمومی و فرضی تدوین شده&zwnj;اند؛ شرایطی که در عمل، به&zwnj;ندرت در پروژه&zwnj;های واقعی اتفاق می&zwnj;افتد. به همین دلیل، برای انطباق بهتر این قیمت&zwnj;ها با واقعیت&zwnj;های هر پروژه، مجموعه&zwnj;ای از ضرایب مشخص به آیتم&zwnj;ها اضافه می&zwnj;شود.</span></span></h1>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اگر با برآورد، متره یا صورت&zwnj;وضعیت&zwnj;نویسی سر و کار دارید، شناخت این ضرایب برای شما یک ضرورت حرفه&zwnj;ای محسوب می&zwnj;شود. در ادامه با ضرایب فهرست بها، انواع و نحوه محاسبه سریع آنها پروژه&zwnj;های عمرانی بیشتر آشنا می&zwnj;شویم.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">ضرایب فهرست بها چیست؟</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضرایب فهرست بها، اعدادی مشخص و مصوب هستند که برای اصلاح، تکمیل و انطباق قیمت&zwnj;های مندرج در فهرست بها با شرایط واقعی اجرای پروژه&zwnj;ها مورد استفاده قرار می&zwnj;گیرند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">قیمت&zwnj;های پایه فهرست بها بر اساس شرایط فرضی و بهینه&zwnj;ای مانند استفاده از نیروی کار بومی، تامین مصالح از نزدیک&zwnj;ترین منبع، دسترسی آسان به ماشین&zwnj;آلات و اجرای کار با نقشه&zwnj;های استاندارد محاسبه شده&zwnj;اند، اما در دنیای واقعی، این شرایط همیشه فراهم نیست. </span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اجرای یک آیتم، ممکن است هزینه&zwnj;هایی متفاوت با آنچه در فهرست بها آمده داشته باشد؛ بنابراین، برای تعدیل قیمت&zwnj;ها متناسب با شرایط واقعی پروژه، مجموعه&zwnj;ای از ضرایب تعریف شده که به آیتم&zwnj;های فهرست بها اعمال می&zwnj;شوند. ضرایب فهرست بها، جنبه&zwnj;های مختلفی از پروژه را پوشش می&zwnj;دهند؛ از محل اجرای پروژه گرفته تا سختی کار، شرایط پیمان، نوع منابع مالی، نحوه تجهیز کارگاه و غیره از آیتم<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های لیست ضرایب هستند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="انواع ضرایب فهرست بها" src="../media/post_inner_images/career-benefits-civil-engineering-study-in-cartagena-scaled.jpg" style="height:667px; width:1000px" /></span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">انواع ضرایب فهرست بها</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">هر پیمان عمرانی مجموعه&zwnj;ای از این ضرایب دارد که بر قیمت خالص آیتم&zwnj;ها ضرب می&zwnj;شود تا هزینه نهایی به&zwnj;دست آید. بعضی از این ضرایب جنبه عمومی دارند و برخی دیگر به پیشنهاد پیمانکار در مناقصه و بر اساس راهبرد مالی پروژه تعیین می&zwnj;شوند.</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضرایب عمومی</strong>: این ضرایب توسط سازمان برنامه و بودجه یا دستگاه&zwnj;های اجرایی تعیین شده و در تمامی پروژه&zwnj;ها به&zwnj;صورت یکسان اعمال می&zwnj;شوند. از جمله این ضرایب می&zwnj;توان به ضریب بالاسری، ضریب تجهیز و برچیدن کارگاه، ضریب منطقه&zwnj;ای و ضریب طبقات اشاره کرد.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضرایب اختصاصی</strong>: این ضرایب توسط پیمانکاران در زمان ارائه پیشنهاد قیمت در مناقصات تعیین می&zwnj;شوند و بسته به شرایط خاص هر پروژه ممکن است متفاوت باشند. ضریب پیشنهادی پیمانکار و ضرایب فصلی از جمله این ضرایب هستند.</span></span></li>
+</ul>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب بالاسری در فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در اجرای پروژه&zwnj;های عمرانی و ساختمانی، بسیاری از هزینه&zwnj;ها پشت&zwnj;صحنه باقی می&zwnj;مانند؛ یعنی نه در قیمت مصالح دیده می&zwnj;شوند و نه در دستمزد نیروهای اجرایی جایی دارند. اینجاست که ضریب بالاسری وارد ماجرا می&zwnj;شود؛ یک ضریب حیاتی که تضمین می&zwnj;کند هزینه&zwnj;های پنهان و غیرمستقیم پروژه نیز در برآورد مالی دیده شوند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب بالاسری به زبانی ساده، درصدی افزوده شده بر هزینه&zwnj;های مستقیم اجرای پروژه است تا مخارجی مانند هزینه&zwnj;های اداری، حقوق پرسنل دفتر مرکزی، اجاره، قبوض، هزینه ضمانت&zwnj;نامه&zwnj;ها، بیمه، مالیات، استهلاک تجهیزات، و حتی سود پیمانکار را جبران کند. این مورد از ضرایب فهرست بها به کارفرما کمک می&zwnj;کند تا تصویری کامل و واقعی از هزینه اجرای پروژه داشته باشد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">هزینه&zwnj;های بالاسری در دو دسته اصلی قرار می&zwnj;گیرند:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>بالاسری عمومی</strong>: مربوط به اداره شرکت پیمانکار، مانند حقوق نیروهای دفتر مرکزی یا اجاره دفتر</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>بالاسری کار</strong>: شامل هزینه&zwnj;های مستقیم پروژه مثل ضمانت&zwnj;نامه&zwnj;ها، بیمه پرسنل پروژه و هزینه آزمایشگاه</span></span></li>
+</ul>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضریب بالاسری در پروژه&zwnj;های مختلف چقدر است؟</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">بر اساس دستورالعمل سازمان برنامه و بودجه، مقدار ضریب بالاسری با توجه به نوع پروژه و روش واگذاری متفاوت است:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در طرح&zwnj;های عمرانی با مناقصه: ضریب 1.30</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در طرح&zwnj;های عمرانی بدون مناقصه (ترک تشریفات): ضریب 1.20</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در طرح&zwnj;های غیرعمرانی با مناقصه: ضریب 1.41</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در طرح&zwnj;های غیرعمرانی بدون مناقصه: ضریب 1.30</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">علت اختلاف این ضرایب عمدتاً به سهم بیمه و نرخ&zwnj;های مالیاتی متفاوت در پروژه&zwnj;های عمرانی و غیرعمرانی بازمی&zwnj;گردد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><img alt="ضریب مصالح پای کار" src="../media/post_inner_images/Gorodenkoff-construction-1.jpg" style="height:563px; width:1000px" /></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب مصالح پای کار</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب مصالح پای کار به منظور محاسبه هزینه مصالحی به کار می&zwnj;رود که در پروژه تحویل گرفته شده ولی هنوز در عملیات اجرایی استفاده نشده&zwnj;اند. این مصالح باید در انبارهای مشخص و قابل کنترل در کارگاه نگهداری شوند تا کارفرما بتواند مقدار دقیق آنها را تایید کند. </span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب مصالح پای کار تنها در صورت&zwnj;وضعیت&zwnj;های موقت کاربرد دارد، زیرا در این مرحله مصالح ذخیره شده ولی هنوز به پروژه وارد نشده&zwnj;اند و بر اساس مقررات، کارفرما تنها ۷۰ درصد از بهای این مصالح را پرداخت می&zwnj;کند، در حالی که هزینه حمل آن&zwnj;ها به طور کامل محاسبه و پرداخت می&zwnj;شود. پس از تحویل موقت و در صورت&zwnj;وضعیت قطعی، مصالح پای کار عملاً صفر می&zwnj;شود زیرا تمامی مصالح مورد نیاز پروژه مصرف شده و ذخیره باقی نمانده است. </span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب منطقه<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>ای فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برآوردهای فنی موجود در فهرست&zwnj;بهای واحد پایه، بر مبنای شرایط استاندارد در مناطق شهری و توسعه&zwnj;یافته کشور تهیه شده&zwnj;اند؛ مناطقی که از نظر دسترسی به مصالح، تجهیزات، حمل&zwnj;ونقل و نیروی انسانی متخصص در سطح مناسبی قرار دارند، اما در بسیاری از پروژه&zwnj;ها، موقعیت جغرافیایی محل اجرا با این شرایط فاصله زیادی دارد. به&zwnj;عنوان مثال، اجرای پروژه&zwnj;ای در یک منطقه کوهستانی دورافتاده یا ناحیه مرزی، با محدودیت&zwnj;های زیرساختی، افزایش هزینه حمل مصالح، کمبود تجهیزات یا حتی شرایط آب&zwnj;وهوایی نامساعد مواجه می&zwnj;شود. </span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در چنین شرایطی، استفاده از ضریب منطقه&zwnj;ای که یکی دیگر از ضرایب فهرست بها محسوب می<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>شود ضروری است تا هزینه اجرای پروژه به&zwnj;درستی و بر پایه واقعیت&zwnj;های اجرایی برآورد شود.</span></span></p>
+
+<p dir="RTL" style="margin-left:58px; margin-right:58px; text-align:center"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><span style="color:#404040"><em>نکته: در پروژه&zwnj;هایی که در چند منطقه با ضرایب مختلف اجرا می&zwnj;شوند (مانند خطوط انتقال، راه&zwnj;سازی یا شبکه&zwnj;های توزیع) ضریب منطقه&zwnj;ای نهایی بر اساس میانگین وزنی حجم عملیات در هر منطقه محاسبه می&zwnj;شود.</em></span></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب طبقات فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب طبقات یکی از عوامل اصلاح&zwnj;کننده در برآورد هزینه پروژه&zwnj;های ساختمانی است که برای تعدیل قیمت&zwnj;های فهرست بها در طبقات مختلف ساختمان مورد استفاده قرار می&zwnj;گیرد. از آن&zwnj;جا که مبالغ درج&zwnj;شده در فهرست بها صرفاً برای اجرای عملیات در طبقه همکف و زیرهمکف تدوین شده&zwnj;اند، لازم است برای طبقات بالاتر و پایین&zwnj;تر ضریبی اعمال شود تا هزینه&zwnj;های مضاعف ناشی از حمل و نقل مصالح، تجهیزات و نیروی انسانی به درستی جبران گردد. این ضریب بر مبنای نسبت مساحت زیربنای هر طبقه به کل مساحت ساختمان و فاصله آن از تراز همکف محاسبه می&zwnj;شود. فرمول رسمی آن به صورت زیر است:</span></span></p>
+
+<p style="text-align:left"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">P = (</span></span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Arial&quot;,sans-serif">&sum;</span></span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">(i </span></span></strong><strong><span style="font-size:12.0pt">&times;</span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> Fi) + </span></span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Arial&quot;,sans-serif">&sum;</span></span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">(j </span></span></strong><strong><span style="font-size:12.0pt">&times;</span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> Bj)) / S</span></span></strong></span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در این فرمول:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>Fi</strong>: مساحت زیربنای طبقه iام بالاتر از همکف</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>Bj</strong>: مساحت زیربنای طبقه jام پایین&zwnj;تر از زیرهمکف</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>i و </strong><strong>j</strong>: شماره طبقه نسبت به همکف یا زیرهمکف</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong><span dir="LTR" style="font-family:&quot;Calibri&quot;,sans-serif">S</span></strong>: مجموع کل زیربنای ساختمان</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در نهایت <span dir="LTR" style="font-family:&quot;Calibri&quot;,sans-serif">P</span> ضریب طبقات خواهد بود که در هزینه اجرای کار ضرب می<span dir="ltr" lang="AR-SA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>شود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="ضریب تجهیز و برچیدن کارگاه" src="../media/post_inner_images/MIND-AND-I-1.jpg" style="height:563px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب تجهیز و برچیدن کارگاه</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب تجهیز و برچیدن کارگاه از دیگر ضرایب فهرست بها و عددی است که برای پوشش هزینه&zwnj;های آماده&zwnj;سازی و جمع&zwnj;آوری تجهیزات، تاسیسات موقت و زیرساخت&zwnj;های مورد نیاز پروژه&zwnj;های عمرانی در ابتدای شروع و پس از اتمام عملیات اجرایی لحاظ می&zwnj;شود. این هزینه شامل اقداماتی مانند احداث یا اجاره دفاتر موقت برای پیمانکار و مشاور، تامین آب و برق، ساخت راه&zwnj;های دسترسی، نصب تابلوها، تجهیز انبار و در نهایت جمع&zwnj;آوری تمامی این موارد پس از پایان پروژه و تسطیح و پاکسازی محل می&zwnj;باشد. </span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">نحوه محاسبه این هزینه به سه روش رایج انجام می&zwnj;شود: </span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">به صورت درصدی از مبلغ اولیه پیمان (معمولاً ۴ تا ۶ درصد)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">به صورت مبلغ مقطوع</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">به&zwnj;عنوان فصلی مجزا در فهرست بها با ضریب پیشنهادی پیمانکار</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پرداخت این هزینه&zwnj;ها معمولاً مرحله&zwnj;ای و متناسب با پیشرفت تجهیز و برچیدن کارگاه انجام می&zwnj;گیرد. این ضریب در پیوست پنجم فهرست بها آمده و رعایت دقیق آن برای کنترل مالی پروژه و حفظ نظم اجرایی بسیار اهمیت دارد.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب تعدیل و تعدیل معکوس فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در پروژه&zwnj;های عمرانی که اجرای آن&zwnj;ها مدت&zwnj;دار و طولانی است، قیمت مصالح، دستمزدها و هزینه ماشین&zwnj;آلات ممکن است به&zwnj;مرور زمان تغییر کند. برای اینکه پیمانکارها ضرر نکنند و پرداخت&zwnj;ها منصفانه باشد، یکی دیگر از ضرایب فهرست بها به نام ضریب تعدیل در قراردادها در نظر گرفته می&zwnj;شود. این ضریب باعث می&zwnj;شود مبلغ قرارداد با توجه به شرایط اقتصادی روز محاسبه گردد. در برخی شرایط خاص هم عکس این کار انجام می&zwnj;شود، یعنی قیمت روز به قیمت پایه برگردانده شده که ضریب تعدیل معکوس نام دارد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای محاسبه ضریب تعدیل در هر فصل کاری پروژه، باید بررسی کنیم که قیمت&zwnj;ها از زمان پیشنهاد پیمانکار تا زمان اجرای واقعی چقدر تغییر کرده&zwnj;اند. برای این کار، سازمان برنامه و بودجه شاخص&zwnj;هایی منتشر می&zwnj;کند که نشان&zwnj;دهنده میانگین افزایش یا کاهش قیمت&zwnj;ها در هر فصل سال هستند. حالا برای به&zwnj;روزرسانی مبلغ پرداختی به پیمانکار، طبق رابطه&zwnj;ای ساده ضریب تعدیل محاسبه می&zwnj;شود:</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب تعدیل <span dir="LTR" style="font-family:&quot;Calibri&quot;,sans-serif">=</span> (شاخص فصل انجام کار &divide; شاخص زمان پیشنهاد قیمت) &times; ضریب ثابت</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در این فرمول:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص فصل انجام کار</strong>: عددی است که نشان می&zwnj;دهد در فصلی که کار انجام شده، قیمت&zwnj;ها چقدر بوده است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص زمان پیشنهاد قیمت</strong>: مربوط به سه&zwnj;ماهه قبل از تاریخی بوده که پیمانکار قیمت پیشنهادی&zwnj;اش را داده است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب ثابت</strong>: معمولاً ۰.۹۵ است، اما اگر پروژه به&zwnj;موقع تمام شود ضریب ۱ در نظر گرفته می&zwnj;شود، اگر با تاخیر مجاز تمام شود ضریب ۰.۹۷۵ اعمال می&zwnj;شود و اگر تاخیر غیرمجاز باشد، همان ۰.۹۵ باقی می&zwnj;ماند.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="ضریب پیمان" src="../media/post_inner_images/Civil-Engineering.jpg" style="height:562px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب پیمان</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">مورد بعدی در لیست ضرایب فهرست بها، ضریب پیمان بوده و عددی است که از تقسیم مبلغ پیشنهادی پیمانکار بر مبلغ برآورد شده توسط کارفرما به&zwnj;دست می&zwnj;آید و مشخص می&zwnj;کند که پیمانکار پروژه را گران&zwnj;تر، ارزان&zwnj;تر یا برابر با قیمت پایه اجرا می&zwnj;کند. انواع ضریب پیمان عبارتند از:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب پلوس (بیشتر از </strong><strong>۱)</strong>: قیمت پیشنهادی پیمانکار بیشتر از برآورد کارفرماست (مثلاً 1.1 یعنی ۱۰<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> اضافه).</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب مینوس (کمتر از </strong><strong>۱)</strong>: پیمانکار تخفیف داده و قیمت پیشنهادی کمتر از برآورد است (مثلاً 0.95 یعنی ۵<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> تخفیف).</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب نت (برابر با </strong><strong>۱)</strong>: قیمت پیشنهادی دقیقاً برابر با برآورد کارفرماست.</span></span></li>
+</ul>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب صعوبت و سختی کار فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب صعوبت و سختی کار درصدی است که برای جبران هزینه&zwnj;های اضافی ناشی از اجرای پروژه در شرایط دشوار مانند مناطق کوهستانی، شرایط آب&zwnj;وهوایی نامساعد، ترافیک شهری، حفاری در اعماق زمین یا شیب&zwnj;های تند به آیتم&zwnj;های فهرست بها افزوده می&zwnj;شود. این ضریب که در شرایط خصوصی پیمان یا با توافق طرفین تعیین می&zwnj;گردد، با هدف حفظ عدالت مالی، افزایش دقت برآوردها و جلوگیری از افت کیفیت اجرایی پروژه&zwnj;ها اعمال می&zwnj;شود.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب ارتفاع</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در بسیاری از پروژه&zwnj;های عمرانی، اجرای عملیات ساختمانی در ارتفاع&zwnj;های بالاتر از سطح زمین با چالش&zwnj;هایی مانند کاهش راندمان نیروی کار، افزایش احتمال حوادث، نیاز به تجهیزات ایمنی و داربست&zwnj;گذاری همراه است. از همین رو، ضریب ارتفاع به عنوان یکی از عوامل تعدیل هزینه، برای جبران این دشواری&zwnj;ها در نظر گرفته می&zwnj;شود. این ضریب، هزینه انجام کار در ارتفاعی بیش از محدوده استاندارد (معمولاً ۳.۵ متر در هر طبقه) را پوشش می&zwnj;دهد و به اغلب فعالیت&zwnj;های اجرایی در آن طبقه، به جز مصالح پای کار اعمال می&zwnj;گردد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تا پیش از انتشار فهرست بهای سال ۱۳۸۸، این ضریب به&zwnj;صورت رسمی در پیوست ضرایب فهرست بها گنجانده شده بود، اما پس از آن، از فهرست رسمی حذف گردید؛ با این حال، اگر در قرارداد پیمان به&zwnj;صورت مشخص به این ضریب اشاره شده باشد، همچنان قابلیت اعمال دارد. روش محاسبه ضریب ارتفاع ممکن است بسته به نوع پروژه و شرایط قرارداد متغیر باشد، اما به&zwnj;طور معمول تابعی از فاصله عمودی بین تراز طبقه موردنظر و سطح مبنا است. برای مثال، در برخی قراردادها فرمولی مانند ضریب <span dir="LTR" style="font-family:&quot;Calibri&quot;,sans-serif">=</span> 1 + (ارتفاع - 3.5) &times; 0.02 استفاده می&zwnj;شود.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب فصل</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب فصل یکی از مهم&zwnj;ترین ضرایب فهرست بها در قراردادهای پیمانکاری است که به منظور دقیق&zwnj;تر شدن محاسبات مالی در پروژه&zwnj;های عمرانی مورد استفاده قرار می&zwnj;گیرد. این ضریب که با نام &laquo;ضریب پیشنهادی جزء&raquo; نیز شناخته می&zwnj;شود، به نوعی بیانگر نحوه قیمت&zwnj;گذاری پیمانکار برای هر فصل کاری از پروژه نسبت به برآورد اولیه دستگاه اجرایی است.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">فرمول محاسبه ضریب فصل ساده است:</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب فصل <span dir="LTR" style="font-family:&quot;Calibri&quot;,sans-serif">=</span> مبلغ پیشنهادی پیمانکار برای یک فصل / مبلغ برآورد شده آن فصل توسط کارفرما</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">به&zwnj;عبارت دیگر، برای هر فصل از فهرست بها (مانند خاک&zwnj;برداری، بتن&zwnj;ریزی، تاسیسات و...) پیمانکار می&zwnj;تواند ضریبی جداگانه ارائه دهد تا تفاوت شرایط، هزینه&zwnj;ها و پیچیدگی&zwnj;های اجرایی هر فصل به&zwnj;درستی لحاظ شود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">این ضریب در مواقعی مانند تهیه صورت&zwnj; وضعیت&zwnj;های موقت و قطعی، یا هنگام افزایش یا کاهش حجم کار تا سقف <span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span>۲۵ مبلغ اولیه، مورد استفاده قرار می&zwnj;گیرد. هدف آن، اعمال قیمت&zwnj;گذاری دقیق و متناسب با شرایط واقعی هر فصل کاری است.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">بر اساس نوع اقلام موجود در هر فصل، ضریب فصل به سه دسته تقسیم می&zwnj;شود:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب فصل برای اقلام پایه</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب فصل برای اقلام غیرپایه (ستاره&zwnj;دار)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضریب فصل برای مجموع اقلام پایه و غیرپایه</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">با کمک این ضرایب فهرست بها، می&zwnj;توان هزینه&zwnj;ها را با دقت بالا و بر اساس نوع فعالیت عمرانی و شرایط اجرای آن محاسبه کرد؛ موضوعی که هم برای کارفرما و هم برای پیمانکار، نقش مهمی در شفاف&zwnj;سازی مالی و کنترل بودجه پروژه ایفا می&zwnj;کند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="ضریب حق بیمه در قراردادهای پیمانکاری" src="../media/post_inner_images/STEM_Careers_Civil_Engineering-scaled.jpg" style="height:667px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضریب حق بیمه در قراردادهای پیمانکاری</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">این ضریب در واقع درصدی است که به&zwnj;منظور تامین حق بیمه اجتماعی نیروی کار شاغل در پروژه از مبلغ ناخالص پیمان محاسبه می&zwnj;شود و بسته به نوع قرارداد (عمرانی یا غیرعمرانی)، نحوه تامین مصالح و ماهیت کار می&zwnj;تواند به&zwnj;شدت متغیر باشد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در قراردادهای عمرانی که براساس بودجه&zwnj;های دولتی تعریف می&zwnj;شوند، ضریب بیمه معمولاً عددی ثابت و مقطوع (۶.۶<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span>) است و سهم مشخصی بین پیمانکار و کارفرما تقسیم می&zwnj;شود، اما در پروژه&zwnj;های غیرعمرانی که توسط بخش خصوصی اجرا می&zwnj;شوند یا ماهیت خدماتی دارند، محاسبه این ضریب از ضرایب فهرست بها پیچیده&zwnj;تر است. </span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در این موارد، سازمان تامین اجتماعی با بررسی سهم نیروی انسانی در اجرای قرارداد، درصد مزد نیروی کار را تخمین زده و با ضرب آن در نرخ قانونی ماده ۲۸ قانون تامین اجتماعی (۲۷<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span>)، ضریبی متناسب برای حق بیمه قرارداد تعیین می&zwnj;کند. به&zwnj;عنوان نمونه، در قراردادهای بدون مصالح، سهم دستمزد بالاتر در نظر گرفته می&zwnj;شود و ضریب نهایی به حدود ۱۶.۶۷<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> می&zwnj;رسد، در حالی که برای قراردادهای مکانیکی با مصالح، این عدد به ۷.۷۷<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> کاهش می&zwnj;یابد.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ضرایب متفرقه فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در کنار ضرایب اصلی مورد استفاده در قراردادهای پیمانکاری، ضرایب متفرقه&zwnj;ای نیز وجود دارند که در شرایط خاص پروژه&zwnj;ها، نوع قرارداد یا ویژگی&zwnj;های فنی، مالی و حقوقی طرح، قابل اعمال هستند. این ضرایب می&zwnj;توانند نقش موثری در شفاف&zwnj;سازی هزینه&zwnj;ها، مدیریت ریسک و ایجاد تعادل بین منافع کارفرما و پیمانکار ایفا کنند. در ادامه، فهرستی از مهم&zwnj;ترین ضرایب متفرقه به&zwnj;صورت خلاصه و طبقه&zwnj;بندی&zwnj;شده ارائه می&zwnj;شود:</span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضرایب مالی و قراردادی</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضرایب فهرست بها در زمینه مالی و قراردادی پروژه<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های پیمانکاری شامل:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب حق&zwnj;الزحمه کارکنان</strong>: درصدی بین ۷<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> تا ۲۵<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> از کل هزینه پروژه، بسته به پیچیدگی و نوع پروژه</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب مالیات بر ارزش افزوده</strong>: معمولاً ۹<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> از مبلغ ناخالص صورت&zwnj;وضعیت</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب کسورات قانونی</strong>: شامل بیمه (۶.۶<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span>)، مالیات تکلیفی و سپرده حسن انجام کار (۱۰<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span>)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب پیش&zwnj;پرداخت</strong>: نسبت مبلغ پیش&zwnj;پرداخت به مبلغ اولیه پیمان (مثلاً ۰.۲ برای ۲۰<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> پیش&zwnj;پرداخت)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب سود پیمانکار در قراردادهای هزینه به&zwnj;علاوه سود</strong>: درصدی از هزینه&zwnj;های واقعی پروژه</span></span></li>
+</ul>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضرایب مربوط به عملکرد پروژه</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضرایب مربوط به عملکرد و روند پروژه عبارتند از:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تاخیر</strong>: جریمه روزانه بابت تاخیر، بر اساس درصدی از مبلغ باقیمانده کار (طبق ماده ۵۰ شرایط عمومی پیمان)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تسریع</strong>: پاداش برای اتمام زودتر از موعد پروژه، معمولاً درصدی از مبلغ پیمان یا مبلغ ثابت</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تغییر مقادیر کار</strong>: در صورتی که تغییرات کمتر از ۲۵<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> مبلغ اولیه باشد با حفظ نرخ فهرست&zwnj;بها</span></span></li>
+</ul>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضرایب فنی و تخصصی</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">مهم&zwnj;ترین ضرایب متفرقه فنی و تخصصی در قراردادهای پیمانکاری که نقش کلیدی در تعیین دقیق هزینه&zwnj;ها و مدیریت مالی پروژه&zwnj;ها دارند، شامل:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب هزینه آزمایش&zwnj;های فنی</strong>: حدود ۰.۲<span dir="ltr" lang="FA" style="font-family:&quot;Arial&quot;,sans-serif">٪</span> برای آزمایش&zwnj;های کنترل کیفیت، بسته به شرایط پیمان</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب آزمایش&zwnj;های خاص/غیرمعمول</strong>: برای تست&zwnj;هایی خارج از فهرست بهای مرجع</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب استانداردهای خاص صنعت</strong>: برای رعایت الزامات فنی خاص مانند API یا ISO در پروژه&zwnj;های حساس</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب مصالح خاص</strong>: برای مصالح کمیاب یا دارای نوسان قیمت زیاد</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب ماشین&zwnj;آلات خاص</strong>: مرتبط با استهلاک یا نگهداری سنگین تجهیزات تخصصی</span></span></li>
+</ul>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضرایب مربوط به شرایط اقتصادی و ریسک&zwnj;ها</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای تضمین دقت محاسبات هزینه، مدیریت ریسک&zwnj;ها و بهینه&zwnj;سازی اجرای پروژه به غیر از دیگر ضرایب فهرست بها، ضرایب متفرقه زیر نیز به کار می&zwnj;روند:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تعدیل نرخ ارز</strong>: جهت جبران نوسانات قیمت ارز در خریدهای خارجی </span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تورم</strong>: در قراردادهایی که بند تعدیل ندارند، جهت جبران اثرات افزایش قیمت&zwnj;ها</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب فورس ماژور</strong>: برای حوادث غیرمترقبه با تاثیر مالی یا زمانی</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تامین مالی پروژه</strong>: در پروژه&zwnj;های BOT یا مشابه برای پوشش هزینه&zwnj;های جذب سرمایه</span></span></li>
+</ul>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">ضرایب مرتبط با مسئولیت&zwnj;ها و الزامات حقوقی</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در پروژه&zwnj;های پیمانکاری، ضرایب مرتبط با مسئولیت&zwnj;ها و الزامات حقوقی نقش کلیدی در مدیریت ریسک&zwnj;ها، تضمین انطباق با قوانین و حفظ حقوق مالکیت فکری ایفا می&zwnj;کنند و به&zwnj;صورت دقیق و حرفه&zwnj;ای برای پوشش هزینه&zwnj;ها و تعهدات ویژه لحاظ می&zwnj;شوند. این ضرایب شامل:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب بیمه&zwnj;های خاص</strong>: نظیر بیمه تمام&zwnj;خطر پروژه یا بیمه مسئولیت مدنی کارفرما در برابر اشخاص ثالث</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب ضمانت&zwnj;نامه&zwnj;ها</strong>: هزینه صدور ضمانت&zwnj;نامه&zwnj;ها در موارد خاص</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب مسئولیت&zwnj;های اجتماعی و زیست&zwnj;محیطی</strong>: برای رعایت قوانین محیط&zwnj;زیست یا تعهدات اجتماعی</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب آموزش و انتقال دانش</strong>: در پروژه&zwnj;هایی با الزامات انتقال فناوری یا آموزش نیروهای کارفرما</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب حقوق مالکیت فکری</strong>: جهت اخذ مجوز استفاده از فناوری یا طرح&zwnj;های دارای مالکیت معنوی</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب مشاوره تخصصی</strong>: مربوط به مشاوره<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های لازم خارج از محدوده معمول پروژه</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">این ضرایب ممکن است در شرایط خصوصی پیمان ذکر شوند یا در توافقات خاص بین کارفرما و پیمانکار لحاظ شوند. استفاده صحیح و مستند از ضرایب متفرقه، نیازمند شناخت کامل ساختار قرارداد، بخشنامه&zwnj;های سازمان برنامه و بودجه و همچنین قوانین جاری مالی و حقوقی کشور است. در تدوین و بررسی این ضرایب، مشورت با مشاوران حقوقی و مالی پروژه توصیه می&zwnj;شود.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">نحوه محاسبه آسان و سریع ضرایب فهرست بها</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در حالت سنتی، محاسبه ضرایب فهرست بها نیازمند جستجو در فایل&zwnj;های PDF، بررسی فصل&zwnj;های مختلف و محاسبات دستی پیچیده است. این روش نه&zwnj;تنها زمان&zwnj;بر است بلکه احتمال خطا نیز در آن بالاست، اما با استفاده از سامانه نوین متره، محاسبه بسیار آسان و دقیق است. در این سامانه می&zwnj;توانید تنها با چند کلیک ساده، ضرایب مورد نیاز را پیدا، انتخاب و به&zwnj;صورت دقیق در صورت وضعیت پروژه&zwnj;تان اعمال کنید.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><img alt="اعمال ضریب" src="../media/post_inner_images/add_zarib.PNG" style="height:465px; width:1000px" /></h3>
+
+<p style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">ثبت و اعمال ضریب در صورت وضعیت</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای اضافه کردن ضرایب، طبق مراحل زیر پیش بروید: </span></span></p>
+
+<ol>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در صفحه صورت وضعیت مورد نظر، از بالای صفحه روی گزینه &laquo;افزودن ضرایب&raquo; کلیک کنید.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اطلاعات ضریب شامل نام، مقدار و توضیحات را وارد کرده و ذخیره را بزنید.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">سپس با کلیک روی آیکون تیک سبز، ضریب را فعال کرده و روی صورت وضعیت مورد نظر اعمال کنید.</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">با زدن بازگشت، به صفحه اصلی صورت وضعیت باز می&zwnj;گردید و ضرایب به&zwnj;صورت خودکار در محاسبات اعمال خواهند شد.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><img alt="افزودن ضریب تجهیز کارگاه در سامانه نوین متره" src="../media/post_inner_images/tajhiz.PNG" style="height:474px; width:1000px" /></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">اضافه کردن ضریب تجهیز</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اگر دسترسی لازم را دارید، می&zwnj;توانید در بخش صورت وضعیت، مقدار ضریب تجهیز را به&zwnj;صورت عددی مشخص کنید. سامانه به&zwnj;طور خودکار جمع کل را با درنظر گرفتن این ضریب محاسبه خواهد کرد.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">جمع<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>بندی</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">ضرایب فهرست بها در حکم قطب&zwnj;نمای مالی هر پروژه عمرانی هستند؛ از ضریب بالاسری و منطقه&zwnj;ای گرفته تا ضریب طبقات، تعدیل، بیمه و ضرایب متفرقه، همه برای واقعی&zwnj;سازی هزینه&zwnj;ها، توزیع منصفانه ریسک و جلوگیری از اختلافات مالی طراحی شده&zwnj;اند. شناخت دقیق هر ضریب، دانستن زمان و محل کاربرد آن و استفاده از ابزارهایی مانند سامانه نوین متره، مسیر تهیه صورت&zwnj; وضعیت&zwnj; را از یک فرآیند زمان&zwnj;بر و خطاپذیر به کاری سریع، شفاف و حرفه&zwnj;ای تبدیل می&zwnj;کند.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">سوالات متداول</span></span></h2>
+
+<ol>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آیا می&zwnj;توان برخی از ضرایب فهرست بها را در طول اجرای پروژه تغییر داد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در شرایط خاص و با موافقت کارفرما و پیمانکار (مثلاً در صورت تغییر گسترده در شرایط پروژه)، امکان بازنگری برخی ضرایب وجود دارد، اما اغلب ضرایب عمومی ثابت هستند.</span></span></p>
+
+<ol start="2">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اگر ضریبی به اشتباه وارد شود، آیا امکان اصلاح یا حذف آن در سامانه نوین متره وجود دارد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">بله، در هر زمان می&zwnj;توانید ضریب اشتباه را ویرایش یا حذف کرده و مجدداً ضریب صحیح را ثبت و اعمال کنید.</span></span></p>
+
+<ol start="3">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اگر در پروژه&zwnj;ای ضریب خاصی اعمال نشده باشد، چه باید کرد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در صورت حذف یا اعمال&zwnj;نشدن یک ضریب ضروری، باید موضوع از طریق متمم قرارداد یا صورتجلسه توافقی با کارفرما اصلاح شود تا دچار مغایرت مالی یا حقوقی نشود.</span></span></p>
+
+    </div>
+    
+
+
+
+    <div class="postanchor heading_space">
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <div class="previous">
+                        <a href="14"> <i class="fa fa-angle-right"></i> مطلب
+                            قبلی</a>
+                        <p>راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها</p>
+                    </div>
+                
+            </div>
+            <span class="share bgdark"><i class="fa fa-share-alt"></i> </span>
+            <div class="share_purpose">
+                <ul class="social_simple">
+                    <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-telegram"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-left">
+                
+                    <div class="nextpost">
+                        <a href="16"> مطلب بعدی <i
+                                class="fa fa-angle-left"></i></a>
+                        <p>همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</p>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="comments" class="row">
+        <h5 class="text-uppercase darkcolor heading bottom40">دیدگاه ها</h5>
+        <div>
+            
+        </div>
+        <form class="text-left" method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="anXsYzhMmaOr9lBnB1dto9DFAe395kPPJ9agpoHiRwKkEiKaG5xfxevhQk3xHKTa">
+            
+
+<form  method="post" > <input type="hidden" name="csrfmiddlewaretoken" value="anXsYzhMmaOr9lBnB1dto9DFAe395kPPJ9agpoHiRwKkEiKaG5xfxevhQk3xHKTa"> <div  
+    class="row" > <div  
+    class="col-md-4 col-sm-12"  dir="rtl"> <div id="div_id_name" class="form-group"> <label for="id_name" class=" requiredField">
+                نام<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="15" class="textinput textInput form-control" required id="id_name"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                آدرس ایمیل<span class="asteriskField">*</span> </label> <div class=""> <input type="email" name="email" maxlength="254" class="emailinput form-control" required id="id_email"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_mobile_number" class="form-group"> <label for="id_mobile_number" class=" requiredField">
+                شماره موبایل<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="mobile_number" maxlength="15" class="textinput textInput form-control" required id="id_mobile_number"> </div> </div> </div>
+<div  
+    class="col-sm-12" > <div id="div_id_message" class="form-group"> <label for="id_message" class=" requiredField">
+                پیام شما<span class="asteriskField">*</span> </label> <div class=""> <textarea name="message" cols="40" rows="10" maxlength="100" class="textarea form-control" required id="id_message">
+</textarea> </div> </div> </div>
+
+</div>
+<div  
+    class="row"  style="display: flex; align-items: center;"> <div  
+    class="col-sm-6" > <div id="div_id_captcha" class="form-group"> <label for="id_captcha_1" class=" requiredField">
+                Captcha<span class="asteriskField">*</span> </label> <div class=""> <img src="../captcha/image/2f16e33bf1e65be0cf248f178fdf1a8b4d32d2ef/index.html" alt="captcha" class="captcha" />
+<input type="hidden" name="captcha_0" value="2f16e33bf1e65be0cf248f178fdf1a8b4d32d2ef" class="hiddeninput" required id="id_captcha_0"><input type="text" name="captcha_1" class="captchaanswerinput" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"> </div> </div> </div>
+<input id="sbtn" type="submit" class="col-sm-5 btn btn-primary p-1" value= ذخیره>
+</div> </form>
+
+        </form>
+    </div>
+
+
+                </div>
+                <aside class="col-md-offset-1 col-md-3 col-sm-4 padding_top_half">
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase darkcolor bottom15">جستجو</h4>
+                        <form class="widget_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon"><i class="fa fa-search"></i> </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">دسته</h4>
+                        <ul class="category" style="padding: 0 !important;">
+                            <li><a href="../blog/0">همه
+                                <span>12</span></a>
+                                
+                                    <li><a href="../blog/1">خبر
+                                        <span>6</span></a>
+                                    </li>
+                                
+                                    <li><a href="../blog/2">آموزشی
+                                        <span>6</span></a>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">جدید ها</h4>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="15#">
+                                        <img class="media-object" src=/media/post_images/%D8%AA%D8%B9%D8%AF%DB%8C%D9%84_%D9%81%D9%87%D8%B1%D8%B3%D8%AA_%D8%A8%D9%87%D8%A7_.jfif
+                                                alt=تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="17">تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="15#">
+                                        <img class="media-object" src=/media/post_images/Business_Process_Analysis_1.webp
+                                                alt=همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="16">همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="15#">
+                                        <img class="media-object" src=/media/post_images/Programming-Languages-for-Civil-Engineers.jpg
+                                                alt=با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="15">با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="15#">
+                                        <img class="media-object" src=/media/post_images/Quantity-Takeoff-Explained.jpg
+                                                alt=راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="14">راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+
+
+
+
+
+
+
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!--Our Blog ends-->
+
+
+
+<!--Footer starts-->
+<footer id="evy-footer" class="padding_half">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6 text-left">
+                <ul class="social top10">
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                    <li><a href="https://t.me/novinmetre"><i class="fa fa-telegram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer enda-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../static/weblog/js/jquery-2.2.3.js"></script>
+
+
+
+<script src="../static/weblog/js/bootstrap.min.js"></script>
+<script src="../static/weblog/js/bootsnav.js"></script>
+<script src="../static/weblog/js/jquery.easing.min.js"></script>
+<script src="../static/weblog/js/swiper.min.js"></script>
+<script src="../static/weblog/js/jquery.cubeportfolio.min.js"></script>
+<script src="../static/weblog/js/jquery.matchHeight-min.js"></script>
+<script src="../static/weblog/js/jquery.fancybox.min.js"></script>
+<script src="../static/weblog/js/jquery.parallax-1.1.3.js"></script>
+
+<script src="../static/weblog/js/jquery.themepunch.tools.min.js"></script>
+<script src="../static/weblog/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.actions.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.layeranimation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.navigation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.parallax.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.slideanims.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.kenburn.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.video.min.js"></script>
+<script src="../static/weblog/js/functions.js"></script>
+<script src="../static/js/toastr.min.js"></script>
+<script>
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>
