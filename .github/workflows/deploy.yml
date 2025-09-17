@@ -3,8 +3,8 @@ name: 🚀 Deploy NovinMetre.ir to GitHub Pages
 on:
   push:
     branches:
-      - main   # هر بار که روی main پوش کنی
-  workflow_dispatch: # اجرای دستی
+      - main   # هر بار روی main پوش کنی
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🚀 Deploy novinmetre.ir to gh-pages
+      - name: 🚀 Deploy novinmetre.ir folder
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
