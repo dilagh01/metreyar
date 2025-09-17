@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="نوین متره یک سامانه آنلاین محاسبه متره، برآورد و صورت وضعیت آنلاین می باشد
+     که بر اساس فهرست بهای سالیانه این امکان را به کاربران می دهد که به سادگی محاسبات خود را انجام داده و بطور آنلاین به همه طرف های پیمان مانند کارفرما،
+     پیمانکار، مشاور، و غیره را اطلاع رسانی کنند تا با جمع آوری نظرات و محاسبات سایرین
+      با کمترین هزینه و در سریع ترین زمان ممکن و با بیشترین دقت به و جمع بندی تایید نهایی برسند.  ">
+
+    <meta name="author" content="تیم نوین متره">
+    <meta name=”robots” content="index, follow">
+    <title>وبلاگ نوین متره (نرم افزار آنلاین محاسبه متره و برآورد)</title>
+
+    <!-- Bootstrap -->
+    <link href="../static/weblog/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/cubeportfolio.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/bootsnav.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/weblog/css/blue.css">
+    <link rel="icon" href="../static/images/favicon.ico">
+</head>
+
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<!--Page Loader-->
+<div class="loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<!--Page Loader ends-->
+
+<!--Header Starts-->
+<header class="default">
+    <nav class="navbar navbar-default navbar-fixed bootsnav">
+        <div class="container">
+            <div class="menu-icon">
+                <span></span>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index/index.html">
+                    <img src="../static/images/svg.svg" class="logo logo-display" alt="لوگوی نوین متره">
+                    
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active">
+                        <a href="../index/index.html" class="scroll">خانه</a></li>
+                    <li><a href="17#features" class="scroll">ویژگی ها</a></li>
+                    
+                    
+                    <li><a href="17#maxo_news" class="scroll"> اخبار</a></li>
+
+                    <li><a href="../blog/0">بلاگ</a></li>
+                    <li><a href="17#contactus" class="scroll">تماس</a></li>
+                    
+                    <li><a target="blank" href="../login/index.html">ورود</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Header ends-->
+
+<!--Full Menu-->
+<section class="overlay-menu">
+    <div class="menu-icon active">
+        <span></span>
+    </div>
+    <div class="centered">
+        <div class="container">
+            <div class="row">
+                
+                
+                
+                
+                
+                <div class="col-sm-12 columns half text-right">
+                    <ul class="full-nav top20 heading_space">
+                        <li class="active"><span>01.</span> <a href="17#home" class="scroll">خانه</a></li>
+                        <li><span>02.</span> <a href="17#features" class="scroll">ویژگی ها</a></li>
+                        <li><span>03.</span> <a href="../simple_register/index.html"> ثبت نام</a></li>
+                        <li><span>04.</span> <a href="../login/index.html">ورود</a></li>
+                        <li><span>05.</span> <a href="17#maxo_news" class="scroll"> اخبار</a></li>
+                        
+                        <li><span>06.</span> <a href="17#contactus" class="scroll">تماس</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-12">
+                    <ul class="social">
+                        
+                        
+                        <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                        <li><a href="https://t.me/novin_metre" target="_blank"><i class="fa fa-telegram"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Full Menu-->
+
+    <!--Page Header-->
+    <section id="page_header" class="page-header padding_top">
+        <div class="container header_content padding_top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-uppercase whitecolor bottom10">بلاگ</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="../index/index.html">خانه</a></li>
+                        <li>بلاگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends-->
+
+    <!-- Our Blog -->
+    <section id="ourblog" class=" padding_bottom padding_top_half">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 padding_top_half">
+                    
+    <div class="blog_item">
+        <div>
+            <img src="../media/post_images/تعدیل_فهرست_بها_.jfif" alt="blog" style="height: 30vh !important; width: 40vw !important;">
+        </div>
+
+
+        <div class="blog_author flat top20">
+            <p class="metas"><i class="fa fa-user"></i> <span>سعید</span></p>
+            <p class="metas"><i class="fa fa-calendar"></i> <span>1404-3-17</span></p>
+            <p class="metas"><i class="fa fa-folder-open"></i> <span>تعدیل فهرست بها, ضریب تعدیل, </span></p>
+        </div>
+        <h2 class="top40 darkcolor bottom25">تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل</h2>
+        <div class="alert alert-dark"
+             style="background-color: lightgrey !important; border-color: darkgray !important;">
+            تعدیل فهرست بها روشی تخصصی برای به‌روزرسانی هزینه‌های پروژه بر اساس نوسانات اقتصادی و زمان اجراست که هدفش کمک به مدیریت صحیح جریان مالی و کنترل هزینه‌ها در پیمان‌های عمرانی است.
+        </div>
+        <hr>
+        <h1 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">وقتی پروژه&zwnj;ای چندساله را با قیمت&zwnj;های امروز شروع می&zwnj;کنیم، چطور باید پاسخ نوسانات فردا را بدهیم؟ تعدیل فهرست بها، دقیقا همان ابزار حقوقی و مالی&zwnj;ست که مهندسان برای مقابله با تورم و تغییرات بازار به آن تکیه می&zwnj;کنند، اما این تعدیل چطور محاسبه می&zwnj;شود و رعایت چه نکاتی در آن حیاتی است؟</span></span></h1>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در این مقاله، با نگاهی دقیق و تخصصی به سراغ جزئیات تعدیل آیتم<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های فهرست بها و نحوه انجام آن رفته<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>ایم.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">تعدیل فهرست بها چیست و چه کاربردی دارد؟</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">وقتی یک قرارداد عمرانی امضا می&zwnj;شود، همه&zwnj;چیز روی کاغذ منظم و قابل&zwnj;پیش&zwnj;بینی به&zwnj;نظر می&zwnj;رسد؛ قیمت&zwnj;ها مشخص&zwnj;اند، عملیات تعیین شده و برنامه زمان&zwnj;بندی آماده است، اما دنیای واقعی همیشه با ثبات روی کاغذ پیش نمی&zwnj;رود. در طول اجرای پروژه ممکن است:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">قیمت مصالحی مانند سیمان، میلگرد و قیر افزایش یابد.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">هزینه حمل&zwnj;ونقل و سوخت چند برابر شود.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">نرخ دستمزد نیروی انسانی تغییر کند.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">شرایط اقتصادی کشور دستخوش نوسانات تورمی شود.</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در چنین شرایطی، اگر پیمانکار همچنان مجبور باشد پروژه را با همان قیمت&zwnj;های اولیه اجرا کند، عملاً باید ضرر بدهد. اینجاست که تعدیل فهرست بها، ابزاری قانونی برای جبران اختلاف بین قیمت&zwnj;های زمان عقد قرارداد و هزینه&zwnj;های واقعی اجرای کار، وارد عمل می&zwnj;شود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">فهرست بها، لیستی از قیمت&zwnj;های واحد برای هر آیتم اجرایی است که در زمان خاصی توسط سازمان برنامه و بودجه منتشر می&zwnj;شود. این قیمت&zwnj;ها بر اساس میانگین هزینه&zwnj; چهار عامل اصلی: مصالح، نیروی انسانی، ماشین&zwnj;آلات و حمل&zwnj;ونقل، محاسبه شده&zwnj;اند، اما چون این عوامل در طول زمان نوسان قیمت دارند، تعدیل فهرست بها برای جبران این تغییرات طراحی شده است.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="تعدیل فهرست بها چیست؟" src="../media/post_inner_images/تعدیل_فهرست_بها_2.jpg" style="height:399px; width:1000px" /></span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">کاربرد اصلی تعدیل، حفظ تعادل مالی پروژه&zwnj;ها بوده، به&zwnj;ویژه در:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">قراردادهای بلندمدت که در آن&zwnj;ها گذر زمان اثر قابل&zwnj;توجهی دارد.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پروژه&zwnj;هایی که با تورم&zwnj;های ناگهانی یا شدید مواجه می&zwnj;شوند.</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">به کمک این مکانیزم، پیمانکار می&zwnj;تواند ما&zwnj;به&zwnj;التفاوت هزینه&zwnj;ها را از کارفرما دریافت کند، بدون آنکه نیاز باشد هر سال قرارداد جدیدی با فهرست&zwnj;بهای به&zwnj;روز منعقد شود. در واقع، تعدیل نه یک امتیاز خاص، بلکه یک ضرورت برای بقای قرارداد در شرایط ناپایدار اقتصادی است؛ ابزاری که تضمین می&zwnj;کند نه پیمانکار متضرر شود و نه پروژه ناتمام بماند.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">دستورالعمل روش انجام تعدیل فهرست بها</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تعدیل آیتم<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>های فهرست بها، فقط یک فرمول محاسباتی نیست؛ پشت آن یک دستورالعمل فنی و الزام&zwnj;آور قرار دارد که همه پروژه&zwnj;ها باید از آن پیروی کنند. این دستورالعمل که به تصویب شورای عالی فنی رسیده، در واقع نقشه راه محاسبه صحیح تعدیل در هر مرحله از پروژه است.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در پروژه&zwnj;هایی که بر اساس فهرست&zwnj;بهای پایه بسته می&zwnj;شوند، هرگونه اعمال تعدیل باید دقیقاً مطابق همین دستورالعمل انجام گیرد. دستگاه&zwnj;های اجرایی موظف&zwnj;اند این دستورالعمل را همراه اسناد مناقصه به پیمانکاران ارائه دهند تا قیمت پیشنهادی آن&zwnj;ها بر مبنای اصول صحیح و قابل پیش&zwnj;بینی تنظیم شود. فرآیند تعدیل در طول عمر یک پروژه، در پنج مقطع اصلی تعریف شده است:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برآورد اولیه پروژه</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تهیه و ارسال اسناد مناقصه</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">بررسی پیشنهادها پیش از انعقاد پیمان</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">مدیریت تعدیل از زمان شروع عملیات اجرایی تا تحویل موقت</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">محاسبات تعدیل نهایی پس از تحویل موقت</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">هر صورت&zwnj;وضعیت تعدیل، در واقع یک صورت&zwnj;وضعیت مستقل با ماهیت مالی خاص خود است که متناسب با پیشرفت پروژه، شرایط زمانی و ضرایب رسمی، محاسبه می&zwnj;شود. اگر می&zwnj;خواهید بدون پیچیدگی&zwnj;های مرسوم، صورت&zwnj;وضعیت&zwnj;های تعدیل&zwnj;شده پروژه&zwnj; خود را سریع و استاندارد تهیه کنید، نرم&zwnj;افزار آنلاین نوین متره این فرآیند را هوشمند و دقیق برایتان انجام می&zwnj;دهد. حال بیایید با مفاهیم کلیدی این محاسبات آشنا شویم.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="اصطلاحات تعدیل فهرست بها" src="../media/post_inner_images/تعدیل_فهرست_بها_3.jpg" style="height:667px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">اصطلاحات کلیدی در تعدیل فهرست بها</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای درک درست محاسبه و نگارش صورت وضعیت تعدیل، آشنایی با واژه&zwnj;ها و تعاریف زیر ضروری است. در ادامه، هر یک از این اصطلاحات را توضیح می&zwnj;دهیم:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>دوره</strong>: هر دوره در فرآیند تعدیل به یکی از بازه&zwnj;های سه&zwnj;ماهه از سال (سه&zwnj;ماهه اول: فروردین تا خرداد، سه&zwnj;ماهه دوم: تیر تا شهریور، سه&zwnj;ماهه سوم: مهر تا آذر، سه&zwnj;ماهه چهارم: دی تا اسفند) اشاره دارد. </span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>دوره پایه</strong>: دوره&zwnj;ای که در آن تمامی شاخص&zwnj;های مربوطه عدد ۱۰۰ تعریف شده&zwnj;اند؛ شاخص&zwnj;هایی که در این بازه منتشر شده&zwnj;اند برابر با ۱۰۰ هستند و بقیه شاخص&zwnj;ها نسبت به آن سنجیده می&zwnj;شوند.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص</strong>: عددی که میزان تغییر (رشد یا کاهش) قیمت&zwnj;ها را در یک دوره نسبت به دوره پایه نشان می&zwnj;دهد. این شاخص&zwnj;ها معمولاً توسط سازمان برنامه و بودجه منتشر می&zwnj;شوند و می&zwnj;توانند قطعی (بازنگری&zwnj;شده و نهایی) یا موقت (اولیه و قابل اصلاح در آینده) باشند.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص فصلی (شاخص گروهی)</strong>: معیاری برای اندازه&zwnj;گیری میانگین تغییرات قیمت اقلام یک فصل از فهرست&zwnj;بها در هر دوره نسبت به دوره پایه است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص رشته&zwnj;ای</strong>: شاخصی که میانگین تغییرات قیمت اجزای یک &laquo;رشته&raquo; خاص (مثل تاسیسات مکانیکی یا ابنیه) از فهرست&zwnj;بهای پایه را در هر دوره نسبت به دوره پایه نشان می&zwnj;دهد. </span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص کلی</strong>: عددی که متوسط تغییرات قیمت کل اقلام تمامی رشته&zwnj;های فهرست&zwnj;بهای پایه را در هر دوره نسبت به دوره پایه نشان می&zwnj;دهد. </span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص مبنای پیمان</strong>: شاخصی که مبنای محاسبه ضریب تعدیل در هر قرارداد و دارای دو حالت: در مناقصه (دوره سه&zwnj;ماهه قبل از مهلت تحویل پیشنهاد قیمت) یا در ترک مناقصه (دوره سه&zwnj;ماهه قبل از ارائه پیشنهاد نهایی توسط پیمانکار) است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>شاخص دوره انجام کار (شاخص دوره کارکرد)</strong>: عدد شاخصی که مختص همان دوره سه&zwnj;ماهه&zwnj;ای&zwnj; بوده که عملیات اجرایی پروژه در آن انجام شده است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>دوره کارکرد</strong>: بازه زمانی دقیق انجام عملیات، معمولاً به&zwnj;صورت &laquo;از تاریخ ... تا تاریخ ...&raquo; درج می&zwnj;شود.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>کارکرد دوره</strong>: مبلغ کلی فعالیت&zwnj;هایی که در طول دوره کارکرد انجام شده&zwnj;اند؛ شامل عملیات اجرایی، مصالح پای کار و تجهیز یا برچیدن کارگاه می<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>شود.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>ضریب تعدیل</strong>: ضریبی برای محاسبه اختلاف بین شاخص دوره کارکرد و شاخص مبنای پیمان است که طبق فرمول <span dir="LTR" style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">Z = [ (K &divide; M) &ndash; 1 ] &times; 0.95</span></span> محاسبه می<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>شود و <span dir="LTR" style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">K</span></span> شاخص دوره کارکرد، <span dir="LTR" style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">M</span></span> شاخص مبنای پیمان و <span dir="LTR" style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">Z</span></span> ضریب تعدیل فهرست بها است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>کار جدید</strong>: فعالیتی که پس از انعقاد قرارداد تعریف شده و در فهرست&zwnj;بهای پیوست قرارداد پیش&zwnj;بینی نشده است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>تفاوت با کار اضافی</strong>: کار اضافی نیز بعد از عقد قرارداد تعریف می&zwnj;شود، اما برخلاف کار جدید، در فهرست&zwnj;بها دارای قیمت است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>تاخیر مجاز</strong>: تاخیر ناشی از عواملی خارج از کنترل پیمانکار (مثل شرایط جوی یا تاخیر کارفرما در پرداخت&zwnj;ها) که با مستندات، قابل تایید است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>تاخیر غیرمجاز</strong>: تاخیری که ناشی از قصور یا ضعف پیمانکار است یا مستندات قابل&zwnj;قبولی ندارد.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>مدت اولیه پیمان</strong>: بازه زمانی درج&zwnj;شده در قرارداد برای اجرای پروژه است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>مدت پیمان</strong>: مجموع مدت اولیه پیمان و مدت تاخیرات مجاز تایید شده را می<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>گویند. </span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>مبلغ اولیه پیمان</strong>: مجموع هزینه اجرای اقلام فهرست&zwnj;بها که در ماده ۳ موافقت&zwnj;نامه ذکر شده است.</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><strong>مبلغ کارکرد صورت&zwnj;وضعیت</strong>: اختلاف بین مبلغ صورت&zwnj;وضعیت فعلی و قبلی برای یک دوره مشخص را می<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>گویند.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="ضریب تعدیل" src="../media/post_inner_images/تعدیل_فهرست_بها_1.jpg" style="height:667px; width:1000px" /></span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">نحوه وارد کردن ضریب تعدیل فهرست بها در محاسبات</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">یکی از جزئیات فنی، اما مهم در فرآیند تعدیل، نحوه&zwnj;ی گرد کردن ضریب تعدیل است. طبق دستورالعمل&zwnj;ها، این ضریب با دقت تا سه رقم اعشار در محاسبات وارد می&zwnj;شود، اما قبل از آن، ضریب با چهار رقم اعشار محاسبه می&zwnj;گردد. اگر رقم چهارم اعشار پنج یا بیشتر باشد، به رقم سوم یک واحد اضافه می&zwnj;شود. در غیر این صورت، رقم چهارم بدون تغییر حذف می&zwnj;شود. این نکته ساده، دقت مالی پروژه را در بلندمدت تضمین خواهد کرد.</span></span></p>
+
+<h4 dir="RTL" style="text-align:justify"><span style="font-size:12pt"><span style="font-family:&quot;B Titr&quot;">از ضریب 0/95 تا عدد ۱ - محاسبه نهایی تعدیل فهرست بها در پایان پروژه</span></span></h4>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در بسیاری از پیمان&zwnj;ها، تعدیل در طول اجرای پروژه با ضریب 0/95 محاسبه می&zwnj;شود که بخشی از ریسک نوسانات قیمت را به پیمانکار منتقل می&zwnj;کند، اما اگر پروژه در بازه&zwnj;ی اولیه یا با تاخیر مجاز به اتمام برسد، این ضریب به ۱ یا 0/975 تغییر پیدا می&zwnj;کند. مابه&zwnj;التفاوت ناشی از این تغییر، باید در صورت&zwnj;وضعیت قطعی محاسبه و به پیمانکار پرداخت شود. این مرحله&zwnj; نهایی نقش مهمی در تسویه&zwnj;حساب مالی پروژه دارد.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">چگونه تعدیل صورت وضعیت<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>ها را محاسبه کنیم؟</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در محاسبه تعدیل، باید مشخص کنیم کارهایی که در هر صورت&zwnj;وضعیت ثبت شده&zwnj;اند، دقیقاً در کدام بازه&zwnj;ی سه&zwnj;ماهه انجام شده&zwnj;اند. برخلاف تصور رایج، مبنای محاسبه شاخص&zwnj;ها نه تاریخ تنظیم یا ارسال صورت&zwnj;وضعیت، بلکه تاریخ واقعی اجرای عملیات در کارگاه است؛ یعنی جایی که بیل مکانیکی، بتن، یا کابل برق واقعاً به&zwnj;کار رفته&zwnj;اند، نه جایی که رقم&zwnj;ها روی کاغذ آمده&zwnj;اند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در گام اول، عملیات انجام&zwnj;شده در هر فصل از فهرست&zwnj;بها (مثل ابنیه، تاسیسات، راه و...) جداگانه تفکیک و ارزش&zwnj;گذاری می&zwnj;شود. سپس، با استفاده از شاخص مبنای پیمان و شاخص دوره کارکرد مربوط به هر فعالیت، ضریب تعدیل فهرست بها محاسبه می&zwnj;گردد. حاصل ضرب این ضریب در مبلغ کارکرد هر فصل، مبلغ تعدیل همان فصل را به ما می&zwnj;دهد. در مرحله نهایی، تعدیل صورت&zwnj;وضعیت از جمع جبری این مقادیر حاصل می&zwnj;شود:</span></span></p>
+
+<ul>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تعدیل فصل&zwnj;های کاری</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تعدیل مصالح پای&zwnj;کار (در صورتی که در دوره نگهداری شده باشند)</span></span></li>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">تعدیل تجهیز یا برچیدن کارگاه تا تاریخ صورت&zwnj;وضعیت</span></span></li>
+</ul>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">برای تسهیل و تسریع روند، توصیه می&zwnj;شود هر ماه شمسی یک صورت&zwnj;وضعیت موقت تنظیم شود که شامل کارکرد دقیق، مصالح موجود و عملیات تجهیز یا برچیدن انجام&zwnj; شده تا آن لحظه باشد. این کار نه&zwnj;تنها دقت محاسبه تعدیل را افزایش می&zwnj;دهد، بلکه پرونده پروژه را برای جلسات رسیدگی، بسیار شفاف&zwnj;تر و مستندتر می&zwnj;کند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در مرحله نهایی پروژه، یعنی صورت&zwnj;وضعیت قطعی، اگر بین آخرین صورت&zwnj;وضعیت موقت و قطعی تفاوتی وجود داشته باشد، مبلغ این تفاوت نیز مشمول تعدیل خواهد بود. در صورتی که دوره دقیق انجام عملیات مشخص باشد، از شاخص همان دوره استفاده می&zwnj;شود. در غیر این صورت، شاخص میانگین دوره&zwnj;های بین آغاز پیمان و صورت&zwnj;وضعیت قبلی ملاک قرار می&zwnj;گیرد، اما اگر این عملیات در بازه تاخیر غیرمجاز انجام شده باشد، تعدیل آن تابع بند (۵-۲) دستورالعمل شورای عالی خواهد بود.</span></span></p>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;"><img alt="زمان پرداخت تعدیل فهرست بها" src="../media/post_inner_images/تعدیل_فهرست_بها_5.jpg" style="height:667px; width:1000px" /></span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">تعدیل در پیمان&zwnj;های خاتمه&zwnj;یافته یا فسخ&zwnj;شده - چه زمانی قابل پرداخت است؟</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پایان زودهنگام یک پیمان، چه به&zwnj;صورت خاتمه به دلایل موجه یا فسخ به علت قصور پیمانکار، همیشه این سوال را ایجاد می&zwnj;کند که آیا کار انجام&zwnj;شده مشمول تعدیل می&zwnj;شود یا اینطور نیست. پاسخ این است که اگر کار به&zwnj;صورت واقعی در کارگاه انجام شده و مورد تایید دستگاه نظارت قرار گرفته باشد، حتی در شرایط فسخ، مبلغ تعدیل طبق دستورالعمل محاسبه و پرداخت می&zwnj;شود. در صورت خاتمه موجه، پیمانکار مستحق دریافت تعدیل کامل برای کارکرد تایید شده خود است.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">نحوه محاسبه و ارائه تعدیل فهرست بها توسط پیمانکار</span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">پیمانکار موظف است مبالغ تعدیل را بر اساس صورت&zwnj;وضعیت&zwnj;های تاییدشده محاسبه کرده و برای بررسی به مهندس مشاور ارائه دهد. این محاسبات باید مستند، دقیق و مطابق با شرایط عمومی پیمان باشد. بند (الف) ماده ۳۷ به&zwnj;روشنی مشخص می&zwnj;کند که نحوه ارائه تعدیل باید مشابه ارائه صورت&zwnj;وضعیت&zwnj;های عادی باشد. دقت در ثبت دوره&zwnj;های کارکرد و انطباق شاخص&zwnj;ها با بازه&zwnj;ی واقعی اجرا، از الزامات اساسی برای پذیرش تعدیل است.</span></span></p>
+
+<h3 dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Titr&quot;">پرداخت علی&zwnj;الحساب تعدیل فهرست بها </span></span></h3>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">گاهی اوقات شاخص&zwnj;های قطعی دوره سه&zwnj;ماهه هنوز اعلام نشده&zwnj;اند، اما پیمانکار برای حفظ جریان نقدی نیاز به دریافت بخشی از تعدیل دارد. در چنین شرایطی، می&zwnj;توان با استفاده از آخرین شاخص&zwnj;های موقت یا قطعی موجود، مبلغ تعدیل را به&zwnj;صورت علی&zwnj;الحساب محاسبه و پرداخت کرد. پس از ابلاغ شاخص&zwnj;های قطعی، این مبلغ بازبینی شده و نسخه نهایی تعدیل به&zwnj;صورت قطعی به حساب پیمانکار منظور می&zwnj;شود.</span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">جمع<span dir="ltr" lang="FA" style="font-family:&quot;A Noor&quot;">&zwnj;</span>بندی</span></span></h2>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">درک درست فرآیند تعدیل فهرست بها، از ضریب&zwnj;ها و شاخص&zwnj;ها تا زمان&zwnj;بندی و نحوه ارائه، نقش مهمی در شفاف&zwnj;سازی مالی پروژه دارد. تعدیل تنها یک محاسبه عددی نیست، بلکه بخشی از راهبرد کلی مدیریت پیمان است. این فرآیند کمک می&zwnj;کند هزینه&zwnj;ها منصفانه تنظیم شوند و پروژه در مسیر مالی درستی حرکت کند. </span></span></p>
+
+<h2 dir="RTL" style="text-align:justify"><span style="font-size:16pt"><span style="font-family:&quot;B Titr&quot;">سوالات متداول</span></span></h2>
+
+<ol>
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">اگر پروژه چند ماه متوقف شود، در محاسبه تعدیل چه تاثیری دارد؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در صورت توقف رسمی و مستند پروژه، دوره توقف از بازه محاسبه شاخص تعدیل حذف می&zwnj;شود.</span></span></p>
+
+<ol start="2">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آیا برای اقلامی که پیمانکار به&zwnj;صورت امانی تهیه کرده، تعدیل محاسبه می&zwnj;شود؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">در صورت تایید کارفرما و وجود در صورت&zwnj;وضعیت، اقلام امانی نیز به شرط تطابق با دستورالعمل&zwnj;ها، می&zwnj;توانند مشمول تعدیل شوند.</span></span></p>
+
+<ol start="3">
+	<li dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">آیا تعدیل شامل آیتم&zwnj;هایی می&zwnj;شود که قیمت آن&zwnj;ها به&zwnj;صورت مقطوع در قرارداد ذکر شده است؟</span></span></li>
+</ol>
+
+<p dir="RTL" style="text-align:justify"><span style="font-size:14pt"><span style="font-family:&quot;B Nazanin&quot;">خیر، آیتم&zwnj;هایی که قیمت آن&zwnj;ها به&zwnj;صورت مقطوع و غیرقابل تغییر در قرارداد درج شده&zwnj;اند، مشمول تعدیل نمی&zwnj;شوند.</span></span></p>
+
+<p dir="RTL" style="text-align:justify">&nbsp;</p>
+
+    </div>
+    
+
+
+
+    <div class="postanchor heading_space">
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <div class="previous">
+                        <a href="16"> <i class="fa fa-angle-right"></i> مطلب
+                            قبلی</a>
+                        <p>همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</p>
+                    </div>
+                
+            </div>
+            <span class="share bgdark"><i class="fa fa-share-alt"></i> </span>
+            <div class="share_purpose">
+                <ul class="social_simple">
+                    <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-telegram"></i> </a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-left">
+                
+            </div>
+        </div>
+    </div>
+    <div id="comments" class="row">
+        <h5 class="text-uppercase darkcolor heading bottom40">دیدگاه ها</h5>
+        <div>
+            
+        </div>
+        <form class="text-left" method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="0GJrFvDAvBqx5PnE2lKNNJJA6dm7wJ3rzsWf6k360XmqAMwr7p4zWOBcmjmv897M">
+            
+
+<form  method="post" > <input type="hidden" name="csrfmiddlewaretoken" value="0GJrFvDAvBqx5PnE2lKNNJJA6dm7wJ3rzsWf6k360XmqAMwr7p4zWOBcmjmv897M"> <div  
+    class="row" > <div  
+    class="col-md-4 col-sm-12"  dir="rtl"> <div id="div_id_name" class="form-group"> <label for="id_name" class=" requiredField">
+                نام<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="15" class="textinput textInput form-control" required id="id_name"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                آدرس ایمیل<span class="asteriskField">*</span> </label> <div class=""> <input type="email" name="email" maxlength="254" class="emailinput form-control" required id="id_email"> </div> </div> </div>
+<div  
+    class="col-md-4 col-sm-12" > <div id="div_id_mobile_number" class="form-group"> <label for="id_mobile_number" class=" requiredField">
+                شماره موبایل<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="mobile_number" maxlength="15" class="textinput textInput form-control" required id="id_mobile_number"> </div> </div> </div>
+<div  
+    class="col-sm-12" > <div id="div_id_message" class="form-group"> <label for="id_message" class=" requiredField">
+                پیام شما<span class="asteriskField">*</span> </label> <div class=""> <textarea name="message" cols="40" rows="10" maxlength="100" class="textarea form-control" required id="id_message">
+</textarea> </div> </div> </div>
+
+</div>
+<div  
+    class="row"  style="display: flex; align-items: center;"> <div  
+    class="col-sm-6" > <div id="div_id_captcha" class="form-group"> <label for="id_captcha_1" class=" requiredField">
+                Captcha<span class="asteriskField">*</span> </label> <div class=""> <img src="../captcha/image/f96290520d0ad4564d2862153364a945e84f47eb/index.html" alt="captcha" class="captcha" />
+<input type="hidden" name="captcha_0" value="f96290520d0ad4564d2862153364a945e84f47eb" class="hiddeninput" required id="id_captcha_0"><input type="text" name="captcha_1" class="captchaanswerinput" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"> </div> </div> </div>
+<input id="sbtn" type="submit" class="col-sm-5 btn btn-primary p-1" value= ذخیره>
+</div> </form>
+
+        </form>
+    </div>
+
+
+                </div>
+                <aside class="col-md-offset-1 col-md-3 col-sm-4 padding_top_half">
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase darkcolor bottom15">جستجو</h4>
+                        <form class="widget_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon"><i class="fa fa-search"></i> </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">دسته</h4>
+                        <ul class="category" style="padding: 0 !important;">
+                            <li><a href="../blog/0">همه
+                                <span>12</span></a>
+                                
+                                    <li><a href="../blog/1">خبر
+                                        <span>6</span></a>
+                                    </li>
+                                
+                                    <li><a href="../blog/2">آموزشی
+                                        <span>6</span></a>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                    <div class="widget heading_space">
+                        <h4 class="text-uppercase bottom15 darkcolor">جدید ها</h4>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="17#">
+                                        <img class="media-object" src=/media/post_images/%D8%AA%D8%B9%D8%AF%DB%8C%D9%84_%D9%81%D9%87%D8%B1%D8%B3%D8%AA_%D8%A8%D9%87%D8%A7_.jfif
+                                                alt=تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="17">تعدیل فهرست بها در پروژه‌های عمرانی - راهنمای تخصصی محاسبه و کاربرد ضریب تعدیل</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="17#">
+                                        <img class="media-object" src=/media/post_images/Business_Process_Analysis_1.webp
+                                                alt=همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="16">همه چیز درباره آنالیز فهرست بها – چگونه آنالیز بها را باید تهیه کرد؟</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="17#">
+                                        <img class="media-object" src=/media/post_images/Programming-Languages-for-Civil-Engineers.jpg
+                                                alt=با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="15">با ضرایب فهرست بها آشنا شوید - سریع‌ترین روش محاسبه و کاربرد هر ضریب</a>
+                                </div>
+                            </div>
+                        
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="17#">
+                                        <img class="media-object" src=/media/post_images/Quantity-Takeoff-Explained.jpg
+                                                alt=راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها
+                                             style="height: 3vh; width: 3vw">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="14">راهنمای کامل فهرست بهای 1404 - بررسی زیرمجموعه‌ها و نحوه دسترسی آسان به آیتم‌ها</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+
+
+
+
+
+
+
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!--Our Blog ends-->
+
+
+
+<!--Footer starts-->
+<footer id="evy-footer" class="padding_half">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6 text-left">
+                <ul class="social top10">
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a></li>
+                    <li><a href="https://t.me/novinmetre"><i class="fa fa-telegram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer enda-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../static/weblog/js/jquery-2.2.3.js"></script>
+
+
+
+<script src="../static/weblog/js/bootstrap.min.js"></script>
+<script src="../static/weblog/js/bootsnav.js"></script>
+<script src="../static/weblog/js/jquery.easing.min.js"></script>
+<script src="../static/weblog/js/swiper.min.js"></script>
+<script src="../static/weblog/js/jquery.cubeportfolio.min.js"></script>
+<script src="../static/weblog/js/jquery.matchHeight-min.js"></script>
+<script src="../static/weblog/js/jquery.fancybox.min.js"></script>
+<script src="../static/weblog/js/jquery.parallax-1.1.3.js"></script>
+
+<script src="../static/weblog/js/jquery.themepunch.tools.min.js"></script>
+<script src="../static/weblog/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.actions.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.layeranimation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.navigation.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.parallax.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.slideanims.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.kenburn.min.js"></script>
+<script src="../static/weblog/js/revolution.extension.video.min.js"></script>
+<script src="../static/weblog/js/functions.js"></script>
+<script src="../static/js/toastr.min.js"></script>
+<script>
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>
