@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-
 <html class="loading" lang="fa" data-textdirection="rtl" dir="rtl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,53 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="theme-color" content="#5A8DEE">
     <meta charset="utf-8">
-    <meta name="description" content="نوین متره یک سامانه آنلاین محاسبه متره، برآورد و صورت وضعیت آنلاین می باشد
-     که بر اساس فهرست بهای سالیانه این امکان را به کاربران می دهد که به سادگی محاسبات خود را انجام داده و بطور آنلاین به همه طرف های پیمان مانند کارفرما،
-     پیمانکار، مشاور، و غیره را اطلاع رسانی کنند تا با جمع آوری نظرات و محاسبات سایرین
-      با کمترین هزینه و در سریع ترین زمان ممکن و با بیشترین دقت به و جمع بندی تایید نهایی برسند.  ">
-    <meta name="keywords" content="متره، برآورد، متره و برآورد آنلاین، صورت وضعیت، فهرست بها،
-     راهداری، خطوط انتقال، تعدیل، ابنیه، تاسیسات، راه و ترابری،
-     مهندسی آب، نیرو، کشاورزی و منابع طبیعی، باند و فرودگاه، تاسیسات، ">
+    <meta name="description" content="نوین متره ...">
+    <meta name="keywords" content="متره، برآورد، ...">
     <meta name="author" content="تیم نوین متره">
-    
     <title>صفحه ورود</title>
-
     <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
-
-    <!-- BEGIN: Vendor CSS-->
+    <!-- styles (unchanged) -->
     <link rel="stylesheet" type="text/css" href="../static/vendor/css/vendors.min.css">
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/bootstrap.min.css" type='text/css'/>
-    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/bootstrap-extended.css"
-          type='text/css'/>
+    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/bootstrap-extended.css" type='text/css'/>
     <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/colors.css" type='text/css'/>
     <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/components.css" type='text/css'/>
-    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/themes/dark-layout.css"
-          type='text/css'/>
-    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/themes/semi-dark-layout.css"
-          type='text/css'/>
-    <!-- END: Theme CSS-->
-
-    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/themes/dark-layout.css" type='text/css'/>
+    <link rel="stylesheet" id='bootstrap-css' href="../static/themeFiles/css/themes/semi-dark-layout.css" type='text/css'/>
     <link rel="stylesheet" id='bootstrap-css'
           href="../static/themeFiles/css/core/menu/menu-types/vertical-menu.css" type='text/css'/>
-    <!-- END: Page CSS-->
     <link rel="stylesheet" href="../static/css/toastr.min.css" type='text/css'/>
-    
-    
-
 </head>
 <body class="vertical-layout vertical-menu-modern 1-column  navbar-sticky footer-static bg-full-screen-image  blank-page blank-page"
       data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
 
-
     <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
-            <div class="content-header row">
-            </div>
+            <div class="content-header row"></div>
             <div class="content-body"><!-- login page start -->
                 <section id="auth-login" class="row flexbox-container">
                     <div class="col-xl-8 col-11">
@@ -70,58 +45,47 @@
                                         </div>
                                         <div class="card-content">
                                             <div class="card-body">
-                                                <form action="index.html" method="POST">
+                                                <!-- فرم همان فرم قدیمی -->
+                                                <form id="novin-local-login-form" action="index.html" method="POST">
                                                     <input type="hidden" name="csrfmiddlewaretoken" value="mja3k6GEtapNNvZx9nNqSAiesay8NXdENlyMRF6Nm8443SS39awjcH21sU5x5g1S">
                                                     <div class="form-group mb-50">
-                                                        <label class="text-bold-700"
-                                                               for="username">شماره موبایل یا نام کاربری</label>
-                                                        <input type="text" name="username"
-                                                               class="form-control text-left"
-                                                               id="exampleInputEmail1"
-                                                               placeholder=شماره موبایل یا نام کاربری
-                                                                       dir="ltr">
+                                                        <label class="text-bold-700" for="username">شماره موبایل یا نام کاربری</label>
+                                                        <input type="text" name="username" class="form-control text-left" id="exampleInputEmail1" placeholder="شماره موبایل یا نام کاربری" dir="ltr">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="text-bold-700"
-                                                               for="exampleInputPassword1">گذرواژه</label>
-                                                        <input type="password" class="form-control text-left"
-                                                               name="password"
-                                                               id="exampleInputPassword1"
-                                                               placeholder=گذرواژه
-                                                                       dir="ltr">
+                                                        <label class="text-bold-700" for="exampleInputPassword1">گذرواژه</label>
+                                                        <input type="password" class="form-control text-left" name="password" id="exampleInputPassword1" placeholder="گذرواژه" dir="ltr">
                                                     </div>
                                                     <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
                                                         <div class="text-left">
                                                             <div class="checkbox checkbox-sm">
-                                                                <input type="checkbox" class="form-check-input"
-                                                                       id="exampleCheck1">
-                                                                <label class="checkboxsmall"
-                                                                       for="exampleCheck1"><small>مرا بخاطر بسپار</small></label>
+                                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                                <label class="checkboxsmall" for="exampleCheck1"><small>مرا بخاطر بسپار</small></label>
                                                             </div>
                                                         </div>
-                                                        <div class="text-right line-height-2"><a
-                                                                href="../smspassreset/index.html"
-                                                                class="card-link"><small>آیا کلمه عبور خود را فراموش کرده اید؟</small></a>
-                                                        </div>
-                                                        <div class="text-right line-height-2"><a
-                                                                href="../onetimepassword/index.html"
-                                                                class="card-link"><small>ورود با رمز پیامکی</small></a>
-                                                        </div>
+                                                        <div class="text-right line-height-2"><a href="../smspassreset/index.html" class="card-link"><small>آیا کلمه عبور خود را فراموش کرده اید؟</small></a></div>
+                                                        <div class="text-right line-height-2"><a href="../onetimepassword/index.html" class="card-link"><small>ورود با رمز پیامکی</small></a></div>
                                                     </div>
 
-                                                    <button type="submit"
-                                                            class="btn btn-primary glow w-100 position-relative">ورود<i
-                                                            id="icon-arrow" class="bx bx-left-arrow-alt"></i></button>
+                                                    <!-- دکمهٔ اصلی -->
+                                                    <button id="novin-local-login-btn" type="submit" class="btn btn-primary glow w-100 position-relative">ورود<i id="icon-arrow" class="bx bx-left-arrow-alt"></i></button>
+
+                                                    <hr>
+
+                                                    <!-- دکمهٔ فعال‌سازی bypass برای توسعه لوکال -->
+                                                    <div class="text-center" style="margin-top:10px;">
+                                                        <button type="button" id="enable-bypass-btn" class="btn btn-outline-success">فعال‌سازی نمایش همه صفحات (لوکال)</button>
+                                                        <button type="button" id="disable-bypass-btn" class="btn btn-outline-danger" style="margin-left:8px;">غیرفعال‌سازی bypass</button>
+                                                    </div>
 
                                                 </form>
-                                                <hr>
-                                                <div class="text-center">
+
+                                                <div class="text-center" style="margin-top:8px;">
                                                     <small class="mr-25">آیا شما کاربری ندارید؟</small>
                                                     <a href="../simple_register/index.html"><small>ثبت نام</small></a>
                                                 </div>
-                                                <div class="text-center">
-                                                    <a href="https://t.me/novin_metre" target="_blank"><i
-                                                            class="fa fa-telegram"></i>join Telegram channel</a>
+                                                <div class="text-center" style="margin-top:6px;">
+                                                    <a href="https://t.me/novin_metre" target="_blank"><i class="fa fa-telegram"></i>join Telegram channel</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -130,8 +94,7 @@
                                 <!-- right section image -->
                                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                                     <div class="card-content">
-                                        <img class="img-fluid" src="../static/images/login.png"
-                                             alt="branding logo">
+                                        <img class="img-fluid" src="../static/images/login.png" alt="branding logo">
                                     </div>
                                 </div>
                             </div>
@@ -139,75 +102,98 @@
                     </div>
                 </section>
                 <!-- login page ends -->
-
             </div>
         </div>
     </div>
     <!-- END: Content-->
 
-
-
- <footer class="footer footer-static footer-light">
-    <p class="clearfix mb-0">
-        <span class="float-left d-inline-block">
-            <a href="index.html#" target="_blank">v. 1.0.0</a>
-        </span>
-
-
-
-    </p>
-</footer>
-
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0">
+            <span class="float-left d-inline-block">
+                <a href="index.html#" target="_blank">v. 1.0.0</a>
+            </span>
+        </p>
+    </footer>
 
 <!-- BEGIN: Vendor JS-->
 <script src="../static/vendor/js/vendors.min.js"></script>
 <script src="../static/themeFiles/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
 <script src="../static/themeFiles/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
 <script src="../static/themeFiles/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
-<!-- BEGIN Vendor JS-->
-
-<!-- BEGIN: Page Vendor JS-->
-<!-- END: Page Vendor JS-->
-
-<!-- BEGIN: Theme JS-->
+<!-- THEME JS -->
 <script src="../static/themeFiles/js/scripts/configs/vertical-menu-light.js"></script>
 <script src="../static/themeFiles/js/core/app-menu.js"></script>
 <script src="../static/themeFiles/js/core/app.js"></script>
 <script src="../static/themeFiles/js/scripts/components.js"></script>
 <script src="../static/themeFiles/js/scripts/footer.js"></script>
-<!-- END: Theme JS-->
-
 <script src="../static/js/toastr.min.js"></script>
 <script src="../static/js/select2.min.js"></script>
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-bottom-left",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "500",
-        "hideDuration": "5000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    };
 
+<!-- ===== اضافه‌شده: اسکریپت لوکال-بای‌پَس ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // فرم لوکال: هر چیزی وارد شود، لاگین موفق می‌شود
+    const form = document.getElementById("novin-local-login-form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // جلوگیری از ارسال واقعی فرم به سرور
+
+        // ست کردن مقدار لاگین عمومی
+        localStorage.setItem("novin_logged_in", "true");
+
+        // اگر می‌خواهیم همه صفحات بدون مراجعه به فرم قابل‌مشاهده باشند،
+        // مقدار زیر را هم ست می‌کنیم (اختیاری)
+        // localStorage.setItem("novin_bypass_all_pages", "true");
+
+        // ریدایرکت به صفحه لیست (یا هر صفحه‌ای که می‌خواهید)
+        window.location.href = "list.html";
+    });
+
+    // دکمهٔ فعال‌سازی bypass (برای توسعه لوکال)
+    const enableBtn = document.getElementById("enable-bypass-btn");
+    enableBtn.addEventListener("click", function () {
+        localStorage.setItem("novin_bypass_all_pages", "true");
+        localStorage.setItem("novin_logged_in", "true");
+        toastr.success("قابلیت مشاهدهٔ همه صفحات فعال شد. اکنون می‌توانید صفحات را مستقیم باز کنید.");
+    });
+
+    // دکمهٔ غیرفعال‌سازی bypass
+    const disableBtn = document.getElementById("disable-bypass-btn");
+    disableBtn.addEventListener("click", function () {
+        localStorage.removeItem("novin_bypass_all_pages");
+        localStorage.removeItem("novin_logged_in");
+        toastr.info("bypass غیرفعال شد. برای دسترسی باید مجدداً لاگین کنید.");
+    });
+
+    // در صورتی که خواستید فوراً bypass را برای این بازدیدگر فعال کنید
+    // (مثلاً حالت فایل:// یا لوکال هاست)
+    const hostname = location.hostname;
+    if (hostname === "localhost" || hostname === "127.0.0.1" || location.protocol === "file:") {
+        // می‌توانید این را فعال کنید یا غیرفعال نگه دارید تا کاربر از دکمه فعال کند
+        // localStorage.setItem("novin_bypass_all_pages", "true");
+        // localStorage.setItem("novin_logged_in", "true");
+        console.info("Running on local host/file protocol — bypass available via دکمه فعال‌سازی.");
+    }
+});
 </script>
 
+<!-- ===== راهنمای استفاده در صفحات دیگر =====
+در ابتدای هر صفحه‌ای که چک لاگین دارد (مثلاً list.html)
+به جای ریدایرکت سخت، از الگوی زیر استفاده کنید:
 
+<script>
+  // اگر bypass فعال است، اجازه نمایش بده
+  if (localStorage.getItem('novin_bypass_all_pages') === 'true') {
+      // bypass فعال -> اجازه نمایش
+  } else {
+      // معمولاً check لاگین اپلیکیشن:
+      if (!localStorage.getItem('novin_logged_in')) {
+          window.location.href = 'login.html';
+      }
+  }
+</script>
 
-
-
-
-
-
-
+این قطعه را در بالای فایل‌های HTML یا فایل اصلی JS پروژه قرار دهید.
+==============================================================-->
 
 </body>
 </html>
